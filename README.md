@@ -19,7 +19,7 @@ print "hello world!"
 print ("hello world!")
 ```
 
-### 2- Instruction for installing Google Assistant on Raspberry Pi
+### 2- Instruction for installing Google Assistant on RPi
 - Follow [this tutorial](https://developers.google.com/assistant/sdk/guides/library/python/) on how to install Google Assistant on RPi.
 
 ### 3- Learn Python:
