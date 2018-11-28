@@ -43,3 +43,8 @@ print ("hello world!")
     - Python - Classes/Objects
 
 
+### 4- Extend Google Assistant capabilities buy defining custom actions.
+
+### 5- Integrate with your device.
+
+### 6- Win the competition.
