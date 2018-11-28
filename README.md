@@ -7,6 +7,8 @@ This repository .... [describe what this repo. is for..]
  - Raspbain image can be download from [here](https://www.raspberrypi.org/downloads/raspbian/).
  - Raspbian already comes bundled with Python 2.7. No need to install Python 🎉 . 
  - ⚠️We will use Python 2.7. Python 3 has the same syntax except with minor differences. For now, it's safe to assume the only difference that matters is the print function :
+ 
+ 
  python 2.7:
 ```python
 print "hello world!"
