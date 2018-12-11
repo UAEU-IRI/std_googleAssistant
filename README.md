@@ -6,7 +6,7 @@ This repository .... [describe what this repo. is for..]
  - Instruction for installing Raspbian on the SD Card can be found [here](https://www.raspberrypi.org/documentation/installation/installing-images/README.md).
  - Raspbain image can be download from [here](https://www.raspberrypi.org/downloads/raspbian/).
  - Raspbian already comes bundled with Python 2.7 and Python 3. No need to install Python 🎉 . 
- - ⚠️We will use Python 2.7. Python 3 has the same syntax except with minor differences. For now, it's safe to assume the only difference that matters is the print function :
+ - ⚠️We will use Python 3. Python 2 has the same syntax except with minor differences. For now, it's safe to assume the only difference that matters is the print function :
  
  
  python 2.7:
