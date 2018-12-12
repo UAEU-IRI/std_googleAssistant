@@ -22,6 +22,8 @@ print ("hello world!")
 ### 2- Instruction for installing Google Assistant on RPi
 - Follow [this tutorial](https://developers.google.com/assistant/sdk/guides/library/python/) on how to install Google Assistant on RPi.
 
+- Steps are shown in [this](https://www.youtube.com/playlist?list=PLOXgnIng908o4v82u68-aLhO8l3Vb8Xl5) YouTube playlist 
+
 ######  If you have time sync problems, you can use the htpdate tool which retrieves time from a given website.
 - First, install htpdate using apt-get:
 ```bash
