@@ -55,7 +55,48 @@
                     }
                 }
             }
-        }
+        },
+              {
+            "name": "vectory",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "vectory",
+                "parameters": [],
+                "trigger": {
+                    "queryPatterns": [
+                        "you are the best",
+                        "victory sign"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "hooray! I'm victorious!"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "vectory",
+                                    "params": {
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        }  
+        
     ],
     "types": [
         {

@@ -45,26 +45,13 @@ WARNING_NOT_REGISTERED = """
 
 
 def process_event(event):
-    """Pretty prints events.
-
-    Prints all events that occur with two spaces between each new
-    conversation and a single space between turns of a conversation.
-
-    Args:
-        event(event.Event): The current event to process.
-    """
-    if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
-        print()
-
-    print(event)
-
-    if (event.type == EventType.ON_CONVERSATION_TURN_FINISHED and
-            event.args and not event.args['with_follow_on_turn']):
-        print()
-    if event.type == EventType.ON_DEVICE_ACTION:
-        for command, params in event.actions:
-            print('Do command', command, 'with params', str(params))
-
+    try:
+        for a in event.actions:
+            if(a[0]=='vectory'):
+                pass
+                #call you function
+    except:
+        pass
 
 def main():
     parser = argparse.ArgumentParser(
