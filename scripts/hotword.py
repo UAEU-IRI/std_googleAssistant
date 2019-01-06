@@ -29,6 +29,10 @@ from google.assistant.library.event import EventType
 from google.assistant.library.file_helpers import existing_file
 from google.assistant.library.device_helpers import register_device
 
+#VIP
+from mylib import victoryFunction
+
+
 try:
     FileNotFoundError
 except NameError:
@@ -49,9 +53,14 @@ def process_event(event):
         for a in event.actions:
             if(a[0]=='vectory'):
                 pass
-                #call you function
+                #victoryFunction()
     except:
         pass
+
+
+def victoryFunc():
+    retrun 10;
+
 
 def main():
     parser = argparse.ArgumentParser(

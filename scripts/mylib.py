@@ -1,6 +1,9 @@
 import RPi.GPIO as GPIO
 
 
+def victoryFunction():
+    return 0;
+
 class Servo:
 	def __init__(self):
 		GPIO.setmode(GPIO.BOARD)
