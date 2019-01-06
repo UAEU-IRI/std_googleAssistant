@@ -13,3 +13,8 @@ This repository .... [describe what this repo. is for..]
 https://pypi.org/project/RPi.GPIO/
 
 https://sourceforge.net/p/raspberry-gpio-python/wiki/Examples/
+
+# launch command:
+```
+python hotword.py --project-id social-arm-69980 --device-model-id social-arm-69980-my-social-arm-9xnl96
+```
