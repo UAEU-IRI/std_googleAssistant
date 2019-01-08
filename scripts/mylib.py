@@ -4,12 +4,14 @@ from time import sleep
    
 class behaviours:
 	def __init__(self):
-	  self.obj = serial.Serial('/dev/ttyS0',9600)
-	 
+		try: 
+			self.obj = serial.Serial('/dev/ttyS0',9600)
+		except: 
+				pass	 
 	def closeHand(self):
 	  self.obj.write('l')
 	  
-    def victoryFunction(self):
+	def victoryFunction(self):
 		self.obj.write('v')
 	  
 class Servo:
