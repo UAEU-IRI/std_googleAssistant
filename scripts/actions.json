@@ -150,6 +150,456 @@
             }
         },
         {
+            "name": "Open Hand",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Open Hand",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "open hand",
+                        "Open fingers",
+                        "open singers",
+                        "hand open",
+                        "han open",
+                        "fingers open",
+                        "hand Open",
+                        "fingers Open",
+                        "open fingers",
+                        "Open hand",
+                        "Open han",
+                        "han Open",
+                        "open",
+                        "open han"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Opening Hand"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Opening Hand",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Number 1",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Number 1",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "show number 1",
+                        "show number one",
+                        "number one",
+                        "show number won",
+                        "number won"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing number one"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Showing number one",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Number 2",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Number 2",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "show number 2",
+                        "show number two",
+                        "number two",
+                        "show number too",
+                        "number too"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing number two"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Showing number two",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+                {
+            "name": "Number 3",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Number 3",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "show number 3",
+                        "show number three",
+                        "number three",
+                        "show number tree",
+                        "number tree"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing number three"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Showing number three",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+         {
+            "name": "Number 4",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Number 4",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "show number 4",
+                        "show number four",
+                        "number four",
+                        "show number for",
+                        "number for"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing number four"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Showing number four",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+            {
+            "name": "Number 5",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Number 5",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "show number 5",
+                        "show number five",
+                        "number five",
+                        "show number fife",
+                        "number fife"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Showing number five"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Showing number five",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+              {
+            "name": "Count Numbers from 1 to 5",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Count Numbers",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Count Numbers",
+                        "Count numbers from 1 to 5",
+                        "Count numbers from 1 too 5"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Counting Numbers 1 2 3 4 5"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Counting Numbers",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+            {
+            "name": "Thumb Up",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Thumb Up",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "My task is done",
+                        "I am done with my task",
+                        "I finished my job"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "You did a great job, well done"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Thumb Up",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+            {
+            "name": "Hi",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Hi",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Hi How are you?",
+                        "High How are you?",
+                        "Hye How are you"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Hi I am fine How are you?"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Saying Hi",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+         {
+            "name": "bye",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Bye",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Bi",
+                        "Bye"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Bye Have a good day"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Saying Bye",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "name": "MAIN",
             "availability": {
                 "deviceClasses": [

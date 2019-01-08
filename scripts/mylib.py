@@ -4,15 +4,43 @@ from time import sleep
    
 class behaviours:
 	def __init__(self):
-		try: 
-			self.obj = serial.Serial('/dev/ttyS0',9600)
-		except: 
-				pass	 
+		self.obj = serial.Serial('/dev/ttyS0',9600)
+	
 	def closeHand(self):
 	  self.obj.write('l')
 	  
 	def victoryFunction(self):
 		self.obj.write('v')
+		
+	def openHand(self):
+		self.obj.write('o')
+		
+	def showNumberOne(self):
+		self.obj.write('1')
+		
+	def showNumberTwo(self):
+		self.obj.write('2')
+		
+	def showNumberThree(self):
+		self.obj.write('3')
+		
+	def showNumberFour(self):
+		self.obj.write('4')
+		
+	def showNumberFive(self):
+		self.obj.write('5')
+		
+	def countingNumbers(self):
+		self.obj.write('c')
+		
+	def thumbUp(self):
+		self.obj.write('t')
+		
+	def Hi(self):
+		self.obj.write('h')
+		
+	def Bye(self):
+		self.obj.write('b')
 	  
 class Servo:
 	def __init__(self):

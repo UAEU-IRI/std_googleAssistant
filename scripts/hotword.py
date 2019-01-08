@@ -57,6 +57,26 @@ def process_event(event):
                 object.victoryFunction()
             elif(a[0]=='Closing Hand'):
                 object.closeHand()
+            elif(a[0]=='Opening Hand'):
+                object.openHand()
+            elif(a[0]=='Showing number one'):
+                object.showNumberOne()
+            elif(a[0]=='Showing number two'):
+                object.showNumberTwo()
+            elif(a[0]=='Showing number three'):
+                object.showNumberThree()
+            elif(a[0]=='Showing number four'):
+                object.showNumberFour()
+            elif(a[0]=='Showing number five'):
+                object.showNumberFive()
+            elif(a[0]=='Counting Numbers'):
+                object.countingNumbers()
+            elif(a[0]=='Thumb Up'):
+                object.thumbUp()
+            elif(a[0]=='Saying Hi'):
+                object.Hi()
+            elif(a[0]=='Saying Bye'):
+                object.Bye()
     except:
         pass
 
