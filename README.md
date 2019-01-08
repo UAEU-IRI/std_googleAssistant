@@ -38,5 +38,5 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 | bye | 'b' | move wrist |
 | close hand | 'l' | close all fingers   |
 | open hand | 'o' | fully extend all fingers   |
-| Play Rock Paper Scissor | 'p' | user press buttons to decide the move |
-| Play Memory Sequence | 's' | user press buttons to decide the numbers sequence he remembers |
+| Play Rock Paper Scissor | 'p' | the hand choose randomlt between rock paper scissor and user press buttons to decide his move |
+| Play Memory Sequence | 's' | the hand do random numbers for example 345 and user try to remember and press buttons to decide the numbers sequence he remembered |
