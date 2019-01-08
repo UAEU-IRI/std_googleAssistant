@@ -23,10 +23,20 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 # Behaviours table
 
 | Behaviour        | Character           | Description  |
-| ------------- |:-------------:| -----:|
-| victory sign      | 'v' | close all fingers, but fully extend index and middle fingers    |
+| ------------- |:-------------:| :-----|
+| victory or peace sign      | 'v' | close all fingers, but fully extend index and middle fingers    |
 | show number 1      | '1' | close all fingers, but fully extend index finger    |
 | show number 2      | '2' | same as victory sign    |
 | show number 3      | '3' | fully extend index, middle, and ring fingers. close remaining fingers    |
 | show number 4      | '4' | fully extend all fingers, but close the thumb   |
 | show number 5      | '5' | fully extend all fingers   |
+| Hand Wake up | 'w' | fully extends all fingers, or the wrist rotates 5 degrees clock wise and -5 degrees counter clockwise and back to zero degree (shake wrist)|
+| Response Finish | 'r' | Relax fingers, fingers close a little |
+| Count numbers from 1 to 5 | 'c' | Extend one finger after another till all fingers is extended|
+| thumb up | 't' | close all fingers but fully extend thumb |
+| Hi | 'h' | extend  and extend all fingers or move wrist |
+| bye | 'b' | move wrist |
+| close hand | 'l' | close all fingers   |
+| open hand | 'o' | fully extend all fingers   |
+| Play Rock Paper Scissor | 'p' | user press buttons to decide the move |
+| Play Memory Sequence | 's' | user press buttons to decide the numbers sequence he remembers |
