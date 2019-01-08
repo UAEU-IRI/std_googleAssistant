@@ -1,9 +1,17 @@
 import RPi.GPIO as GPIO
-
-
-def victoryFunction():
-    return 0;
-
+import serial
+from time import sleep
+   
+class behaviours:
+	def __init__(self):
+	  self.obj = serial.Serial('/dev/ttyS0',9600)
+	 
+	def closeHand(self):
+	  self.obj.write('l')
+	  
+    def victoryFunction(self):
+		self.obj.write('v')
+	  
 class Servo:
 	def __init__(self):
 		GPIO.setmode(GPIO.BOARD)
@@ -20,7 +28,3 @@ class Servo:
 	def __del__(self):
 		p.stop()
 		GPIO.cleanup()
-		
-		
-		
-		

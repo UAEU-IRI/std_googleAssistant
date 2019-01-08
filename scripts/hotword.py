@@ -30,8 +30,9 @@ from google.assistant.library.file_helpers import existing_file
 from google.assistant.library.device_helpers import register_device
 
 #VIP
-from mylib import victoryFunction
-
+#from mylib import victoryFunction
+#from mylib import closeHand
+from mylib import behaviours
 
 try:
     FileNotFoundError
@@ -49,20 +50,19 @@ WARNING_NOT_REGISTERED = """
 
 
 def process_event(event):
+    global object 
     try:
         for a in event.actions:
             if(a[0]=='vectory'):
-                pass
-                #victoryFunction()
+                object.victoryFunction()
+            elif(a[0]=='Closing Hand'):
+                object.closeHand()
     except:
         pass
 
-
-def victoryFunc():
-    retrun 10;
-
-
 def main():
+    global object
+    object = behaviours()
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--device-model-id', '--device_model_id', type=str,
