@@ -52,6 +52,12 @@ WARNING_NOT_REGISTERED = """
 def process_event(event):
     global object 
     try:
+        #if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
+        #object.HandWakeUp()
+
+    #if (event.type == EventType.ON_CONVERSATION_TURN_FINISHED and
+          #  event.args and not event.args['with_follow_on_turn']):
+        #object.finishResponse()
         for a in event.actions:
             if(a[0]=='vectory'):
                 object.victoryFunction()
@@ -77,6 +83,10 @@ def process_event(event):
                 object.Hi()
             elif(a[0]=='Saying Bye'):
                 object.Bye()
+            elif(a[0]=='Play SRP'):
+                object.PlaySRP()
+            elif(a[0]=='Memory Game'):
+                object.Memory()
     except:
         pass
 

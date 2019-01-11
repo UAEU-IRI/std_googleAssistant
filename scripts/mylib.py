@@ -41,6 +41,18 @@ class behaviours:
 		
 	def Bye(self):
 		self.obj.write('b')
+		
+	def PlaySRP(self):
+		self.obj.write('p')
+		
+	def Memory(self):
+		self.obj.write('s')
+		
+	def HandWakeUp(self):
+		self.obj.write('w')
+	
+	def finishResponse(self):
+		self.obj.write('r')
 	  
 class Servo:
 	def __init__(self):

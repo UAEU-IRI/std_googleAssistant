@@ -600,6 +600,96 @@
             }
         },
         {
+            "name": "Play Rock Paper Scissor",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Play Rock Paper Scissor",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Play Rock paper Scissors",
+                        "Play Rock Paper Scissor",
+                        "Play Scissors Rock paper",
+                        "Play Scissor Rock paper",
+                        "Play paper Scissors Rock",
+                        "Play paper Scissor Rock"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Hooray, let us play rock paper Scissors"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Play SRP",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Play Memory Sequence",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Play Memory Sequence",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Play Memory Sequence",
+                        "Play Sequence",
+                        "Play Remembering Sequence",
+                        "Play Memory Game"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Hooraay, Let us play memory sequence Game"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Memory Game",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "name": "MAIN",
             "availability": {
                 "deviceClasses": [
