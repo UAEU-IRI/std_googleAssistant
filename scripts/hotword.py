@@ -51,13 +51,14 @@ WARNING_NOT_REGISTERED = """
 
 def process_event(event):
     global object 
-    try:
-        #if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
-        #object.HandWakeUp()
+    #print(event)
+    if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
+        object.HandWakeUp()
 
-    #if (event.type == EventType.ON_CONVERSATION_TURN_FINISHED and
-          #  event.args and not event.args['with_follow_on_turn']):
-        #object.finishResponse()
+    if (event.type == EventType.ON_CONVERSATION_TURN_FINISHED and
+            event.args and not event.args['with_follow_on_turn']):
+        object.finishResponse()
+    try:
         for a in event.actions:
             if(a[0]=='vectory'):
                 object.victoryFunction()

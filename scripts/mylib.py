@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import serial
 from time import sleep
+from subprocess import call
    
 class behaviours:
 	def __init__(self):
@@ -49,6 +50,7 @@ class behaviours:
 		self.obj.write('s')
 		
 	def HandWakeUp(self):
+		call(['aplay','/home/pi/std_googleAssistant/scripts/wakeup.wav'])
 		self.obj.write('w')
 	
 	def finishResponse(self):
