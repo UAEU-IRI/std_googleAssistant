@@ -51,7 +51,7 @@ WARNING_NOT_REGISTERED = """
 
 def process_event(event):
     global object 
-    #print(event)
+    print(event)
     if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
         object.HandWakeUp()
 

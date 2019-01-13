@@ -8,53 +8,53 @@ class behaviours:
 		self.obj = serial.Serial('/dev/ttyS0',9600)
 	
 	def closeHand(self):
-	  self.obj.write('l')
+	  self.obj.write(b'l')
 	  
 	def victoryFunction(self):
-		self.obj.write('v')
+		self.obj.write(b'v')
 		
 	def openHand(self):
-		self.obj.write('o')
+		self.obj.write(b'o')
 		
 	def showNumberOne(self):
-		self.obj.write('1')
+		self.obj.write(b'1')
 		
 	def showNumberTwo(self):
-		self.obj.write('2')
+		self.obj.write(b'2')
 		
 	def showNumberThree(self):
-		self.obj.write('3')
+		self.obj.write(b'3')
 		
 	def showNumberFour(self):
-		self.obj.write('4')
+		self.obj.write(b'4')
 		
 	def showNumberFive(self):
-		self.obj.write('5')
+		self.obj.write(b'5')
 		
 	def countingNumbers(self):
-		self.obj.write('c')
+		self.obj.write(b'c')
 		
 	def thumbUp(self):
-		self.obj.write('t')
+		self.obj.write(b't')
 		
 	def Hi(self):
-		self.obj.write('h')
+		self.obj.write(b'h')
 		
 	def Bye(self):
-		self.obj.write('b')
+		self.obj.write(b'b')
 		
 	def PlaySRP(self):
-		self.obj.write('p')
+		self.obj.write(b'p')
 		
 	def Memory(self):
-		self.obj.write('s')
+		self.obj.write(b's')
 		
 	def HandWakeUp(self):
-		call(['aplay','/home/pi/std_googleAssistant/scripts/wakeup.wav'])
-		self.obj.write('w')
+		call(['aplay','/home/pi/std_googleAssistant/scripts/ding.wav'])
+		self.obj.write(b'w')
 	
 	def finishResponse(self):
-		self.obj.write('r')
+		self.obj.write(b'r')
 	  
 class Servo:
 	def __init__(self):
