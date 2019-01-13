@@ -54,10 +54,6 @@ def process_event(event):
     print(event)
     if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
         object.HandWakeUp()
-
-    if (event.type == EventType.ON_CONVERSATION_TURN_FINISHED and
-            event.args and not event.args['with_follow_on_turn']):
-        object.finishResponse()
     try:
         for a in event.actions:
             if(a[0]=='vectory'):
@@ -88,6 +84,8 @@ def process_event(event):
                 object.PlaySRP()
             elif(a[0]=='Memory Game'):
                 object.Memory()
+            elif(a[0]=='Relax'):
+                object.finishResponse()
     except:
         pass
 

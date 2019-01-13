@@ -690,6 +690,47 @@
             }
         },
         {
+            "name": "Relax",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Relax",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Relax"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Ok I am in relaxing mode"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Relax",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "name": "MAIN",
             "availability": {
                 "deviceClasses": [
