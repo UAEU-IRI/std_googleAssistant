@@ -40,3 +40,4 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 | open hand | 'o' | fully extend all fingers   |
 | Play Rock Paper Scissor | 'p' | the hand choose randomly between rock paper scissor and user press buttons to decide his move |
 | Play Memory Sequence | 's' | the hand do random numbers for example 345 and user try to remember and press buttons to decide the numbers sequence he remembered |
+| Have a good day | 'u' | bye function   |
