@@ -4,13 +4,13 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 ```
 # Behaviours table from ARD to RPI
 
-| Character        | Description           | 
-| ------------- | :-------------| 
+| Character        | Description | 
+| ------------- | :-----| 
 | 'l'     | play loss song | 
 | 'w'     | play win song | 
 | 't'     | play same song | 
 | 'c'     | count the number of fingers that arm have| 
 | 'm'     | after we ask about hand sign of shaikh Mohammad  | 
-| 'i'     |hand sign of shaikh Mohammad "Wen" |
-| 'v'     |hand sign of shaikh Mohammad "Victory" | 
-| 'e'     |hand sign of shaikh Mohammad "Love" |
+| 'i'     | hand sign of shaikh Mohammad "Wen" |
+| 'v'     | hand sign of shaikh Mohammad "Victory" | 
+| 'e'     | hand sign of shaikh Mohammad "Love" |
