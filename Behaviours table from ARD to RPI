@@ -5,7 +5,7 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 # Behaviours table from ARD to RPI
 
 | Character        | Description           | 
-| ------------- |:-------------:| 
+| ------------- | :-------------| 
 | 'l'     | play loss song | 
 | 'w'     | play win song | 
 | 't'     | play same song | 
