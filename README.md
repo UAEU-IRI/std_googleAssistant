@@ -50,8 +50,10 @@ python hotword.py --project-id social-arm-69980 --device-model-id social-arm-699
 | 'l'     | play loss song | 
 | 'w'     | play win song | 
 | 't'     | play same song | 
+| 'a'     | play loss song for memory game | 
+| 'b'     | play win song for memory game| 
 | 'c'     | count the number of fingers that arm have| 
 | 'm'     | after we ask about hand sign of shaikh Mohammad  | 
-| 'i'     | hand sign of shaikh Mohammad "Wen" |
+| 'i'     | hand sign of shaikh Mohammad "Win" |
 | 'v'     | hand sign of shaikh Mohammad "Victory" | 
 | 'e'     | hand sign of shaikh Mohammad "Love" |
