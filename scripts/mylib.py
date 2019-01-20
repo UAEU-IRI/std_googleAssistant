@@ -7,11 +7,11 @@ class behaviours:
 	def __init__(self):
 		self.obj = serial.Serial('/dev/ttyS0',9600)
 	
-	def closeHand(self):
-	  self.obj.write(b'l')
-	  
 	def victoryFunction(self):
 		self.obj.write(b'v')
+		
+	def closeHand(self):
+	    self.obj.write(b'l')
 		
 	def openHand(self):
 		self.obj.write(b'o')
@@ -30,18 +30,34 @@ class behaviours:
 		
 	def showNumberFive(self):
 		self.obj.write(b'5')
-		
-	def countingNumbers(self):
+	
+	def LeaderMohammed (self):
+		self.obj.write (b'm')
+		sleep (2)
+		if (self.obj.read =='e')
+			call (['espeak', 'Love'])
+			self.obj.write (b'a')
+			sleep (2)
+		if (self.obj.read =='v')
+			call (['espeak', 'Victory'])
+			self.obj.write (b'v')
+			sleep (2)
+		if (self.obj.read =='i') 
+			call (['espeak', 'Win']) 
+			self.obj.write (b'd')
+
+	def countingFingers(self):
 		self.obj.write(b'c')
-		call(['espeak','One'])
-		call(['espeak','Two'])
-		call(['espeak','Three'])
-		call(['espeak','Four'])
-		call(['espeak','Five'])
+		sleep (2) 
+		if (self.obj.read =='c') 
+			call (['espeak', 'I have 5 fingers'])
 		
 	def thumbUp(self):
 		self.obj.write(b't')
 		
+	def Out (self):
+		self.obj.write (b'u')
+ 
 	def Hi(self):
 		self.obj.write(b'h')
 		
@@ -50,13 +66,26 @@ class behaviours:
 		
 	def PlaySRP(self):
 		self.obj.write(b'p')
-		
+		sleep (10) 
+		if (self.obj.read () == 'w'):
+			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
+		elif (self.obj.read () == 'l'):
+			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
+		elif (self.obj.read () == 't'):
+			call (['espeak', 'oh we did the same move, let us play again'])
+			self.obj.write (b 'p')
+
 	def Memory(self):
 		self.obj.write(b's')
+		sleep (10) 
+		if (self.obj.read () == 'a'):		
+			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
+		elif (self.obj.read () == 'b'):
+			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
 	def HandWakeUp(self):
-		call(['aplay','/home/pi/std_googleAssistant/scripts/ding.wav'])
 		self.obj.write(b'w')
+		call(['aplay','/home/pi/std_googleAssistant/scripts/ding.wav'])
 	
 	def finishResponse(self):
 		self.obj.write(b'r')
@@ -72,8 +101,7 @@ class Servo:
 	def attach(self,pin):
 		GPIO.setup(pin, GPIO.OUT)
 		self.p = GPIO.PWM(pin, 50)
-
-	
+		
 	def write(self,ang):
 		self.p.start((ang*5.0)/180.0+5.0)
 		
