@@ -5,7 +5,7 @@ from subprocess import call
    
 class behaviours:
 	def __init__(self):
-		self.obj = serial.Serial('/dev/ttyS0',9600)
+		self.obj = serial.Serial('/dev/ttyACM0',9600)
 	
 	def victoryFunction(self):
 		self.obj.write(b'v')
@@ -34,22 +34,22 @@ class behaviours:
 	def LeaderMohammed (self):
 		self.obj.write (b'm')
 		sleep (2)
-		if (self.obj.read == b'e'):
+		if (self.obj.read == 'e'):
 			call (['espeak', 'Love'])
 			self.obj.write (b'a')
 			sleep (2)
-		if (self.obj.read == b'v'):
+		if (self.obj.read == 'v'):
 			call (['espeak', 'Victory'])
 			self.obj.write (b'v')
 			sleep (2)
-		if (self.obj.read == b'i'):
+		if (self.obj.read == 'i'):
 			call (['espeak', 'Win']) 
 			self.obj.write (b'd')
 
 	def countingFingers(self):
 		self.obj.write(b'c')
 		sleep (2) 
-		if (self.obj.read == b'c'): 
+		if (self.obj.read == 'c'): 
 			call (['espeak', 'I have 5 fingers'])
 		
 	def thumbUp(self):
@@ -66,21 +66,23 @@ class behaviours:
 		
 	def PlaySRP(self):
 		self.obj.write(b'p')
-		sleep (10) 
-		if (self.obj.read () == b'w'):
-			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
-		elif (self.obj.read () == b'l'):
-			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
-		elif (self.obj.read () == b't'):
+		sleep (2) 
+		if (self.obj.read () == 'w'):
+			call (['espeak', 'win'])
+			#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
+		elif (self.obj.read () == 'l'):
+			call (['espeak', 'lose'])
+			#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
+		elif (self.obj.read () == 't'):
 			call (['espeak', 'oh we did the same move, let us play again'])
 			self.obj.write (b'p')
 
 	def Memory(self):
 		self.obj.write(b's')
 		sleep (10) 
-		if (self.obj.read () == b'a'):		
+		if (self.obj.read () == 'a'):		
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
-		elif (self.obj.read () == b'b'):
+		elif (self.obj.read () == 'b'):
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
 	def HandWakeUp(self):
