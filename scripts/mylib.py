@@ -33,6 +33,11 @@ class behaviours:
 		
 	def countingNumbers(self):
 		self.obj.write(b'c')
+		call(['espeak','One'])
+		call(['espeak','Two'])
+		call(['espeak','Three'])
+		call(['espeak','Four'])
+		call(['espeak','Five'])
 		
 	def thumbUp(self):
 		self.obj.write(b't')
@@ -55,6 +60,9 @@ class behaviours:
 	
 	def finishResponse(self):
 		self.obj.write(b'r')
+	
+	def Out(self):
+		self.obj.write(b'u')
 	  
 class Servo:
 	def __init__(self):

@@ -86,6 +86,8 @@ def process_event(event):
                 object.Memory()
             elif(a[0]=='Relax'):
                 object.finishResponse()
+            elif(a[0]=='Out'):
+                object.Out()
     except:
         pass
 

@@ -444,7 +444,8 @@
                     "queryPatterns": [
                         "Count Numbers",
                         "Count numbers from 1 to 5",
-                        "Count numbers from 1 too 5"
+                        "Count numbers from 1 too 5",
+                        "account Numbers"
                     ]
                 }
             },
@@ -454,7 +455,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Counting Numbers 1     2     3     4     5"
+                                    "textToSpeech": "Counting Numbers"
                                 }
                             },
                             {
@@ -628,7 +629,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Hooray, let us play rock paper Scissors"
+                                    "textToSpeech": "let us play rock paper Scissors, press the start button to begin, Button 1 for rock, button 2 for Paper, button 3 for Scissors"
                                 }
                             },
                             {
@@ -719,6 +720,48 @@
                             {
                                 "deviceExecution": {
                                     "command": "Relax",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Out",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Out",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "I am going out",
+                        "am out"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Enjoy your day"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Out",
                                      "params": {
                                         "number": "$number"
                                     }
