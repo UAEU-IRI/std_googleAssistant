@@ -34,22 +34,22 @@ class behaviours:
 	def LeaderMohammed (self):
 		self.obj.write (b'm')
 		sleep (2)
-		if (self.obj.read =='e')
+		if (self.obj.read == b'e'):
 			call (['espeak', 'Love'])
 			self.obj.write (b'a')
 			sleep (2)
-		if (self.obj.read =='v')
+		if (self.obj.read == b'v'):
 			call (['espeak', 'Victory'])
 			self.obj.write (b'v')
 			sleep (2)
-		if (self.obj.read =='i') 
+		if (self.obj.read == b'i'):
 			call (['espeak', 'Win']) 
 			self.obj.write (b'd')
 
 	def countingFingers(self):
 		self.obj.write(b'c')
 		sleep (2) 
-		if (self.obj.read =='c') 
+		if (self.obj.read == b'c'): 
 			call (['espeak', 'I have 5 fingers'])
 		
 	def thumbUp(self):
@@ -67,20 +67,20 @@ class behaviours:
 	def PlaySRP(self):
 		self.obj.write(b'p')
 		sleep (10) 
-		if (self.obj.read () == 'w'):
+		if (self.obj.read () == b'w'):
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
-		elif (self.obj.read () == 'l'):
+		elif (self.obj.read () == b'l'):
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
-		elif (self.obj.read () == 't'):
+		elif (self.obj.read () == b't'):
 			call (['espeak', 'oh we did the same move, let us play again'])
-			self.obj.write (b 'p')
+			self.obj.write (b'p')
 
 	def Memory(self):
 		self.obj.write(b's')
 		sleep (10) 
-		if (self.obj.read () == 'a'):		
+		if (self.obj.read () == b'a'):		
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
-		elif (self.obj.read () == 'b'):
+		elif (self.obj.read () == b'b'):
 			call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
 	def HandWakeUp(self):
