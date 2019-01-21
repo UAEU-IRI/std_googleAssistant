@@ -33,27 +33,25 @@ class behaviours:
 	
 	def LeaderMohammed (self):
 		self.obj.write (b'm')
-		while true:
-			if (self.obj.inWaiting()>0):
-				sleep (1)	
-				if (self.obj.read == b'e'):
+		while (self.obj.inWaiting()<1):
+			pass
+		temp=self.obj.read ()
+		if (temp == bytes(b'e')):
 					call (['espeak', 'Love'])
 					self.obj.write (b'a')
-					sleep (1)
-				if (self.obj.read == b'v'):
+		if (temp == bytes(b'v')):
 					call (['espeak', 'Victory'])
 					self.obj.write (b'v')
-					sleep (1)
-				if (self.obj.read == b'i'):
+		if (temp == bytes(b'i')):
 					call (['espeak', 'Win']) 
 					self.obj.write (b'd')
 
 	def countingFingers(self):
 		self.obj.write(b'c') 
-		while true:
-			if (self.obj.inWaiting()>0):
-				sleep (1)
-				if (self.obj.read == b'c'): 
+		while (self.obj.inWaiting()<1):
+			pass
+		temp=self.obj.read ()
+		if (temp == bytes(b'c')): 
 					call (['espeak', 'I have 5 fingers'])
 		
 	def thumbUp(self):
@@ -73,8 +71,7 @@ class behaviours:
 		while (self.obj.inWaiting()<1):
 			pass
 		temp=self.obj.read ()
-				#sleep (1)
-		if (temp== bytes(b'w')):
+		if (temp == bytes(b'w')):
 					call (['espeak', 'win'])
 				#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
 		elif (temp == bytes(b'l')):
@@ -86,13 +83,13 @@ class behaviours:
 
 	def Memory(self):
 		self.obj.write(b's')
-		while true:
-			if (self.obj.inWaiting()>0):
-				sleep (1) 
-				if (self.obj.read () == b'a'):
+		while (self.obj.inWaiting()<1):
+			pass
+		temp=self.obj.read ()
+		if (temp == bytes(b'a')):
 					call (['espeak', 'win'])		
 					#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
-				elif (self.obj.read () == b'b'):
+		elif (temp == bytes(b'b')):
 					call (['espeak', 'lose'])
 					#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
