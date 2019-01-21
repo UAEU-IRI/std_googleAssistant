@@ -1,7 +1,7 @@
 {
     "manifest": {
-        "displayName": "Blinky light",
-        "invocationName": "Blinky light",
+        "displayName": "IF-Intelligent Fellow",
+        "invocationName": "IF-Intelligent Fellow",
         "category": "PRODUCTIVITY"
     },
     "actions": [
@@ -70,7 +70,8 @@
                 "parameters": [],
                 "trigger": {
                     "queryPatterns": [
-                        "victory sign"
+                        "Let us take a picture",
+                        "pose for the camera"
                     ]
                 }
             },
@@ -80,7 +81,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "hooray! I'm victorious!"
+                                    "textToSpeech": "oh I like that"
                                 }
                             },
                             {
@@ -150,7 +151,7 @@
             }
         },
         {
-            "name": "Open Hand",
+            "name": "High Five",
             "availability": {
                 "deviceClasses": [
                     {
@@ -159,24 +160,14 @@
                 ]
             },
             "intent": {
-                "name": "Open Hand",
+                "name": "High Five",
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "open hand",
-                        "Open fingers",
-                        "open singers",
-                        "hand open",
-                        "han open",
-                        "fingers open",
-                        "hand Open",
-                        "fingers Open",
-                        "open fingers",
-                        "Open hand",
-                        "Open han",
-                        "han Open",
-                        "open",
-                        "open han"
+                        "High Five",
+                        "Hi Five",
+                        "High Fife",
+                        "Hi Fife"
                     ]
                 }
             },
@@ -186,12 +177,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Opening Hand"
+                                    "textToSpeech": "High Five"
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "Opening Hand",
+                                    "command": "High Five",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -428,8 +419,48 @@
                 }
             }
         },
+         {
+      "name": "Leader Mohammed",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Leader Mohammed",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "show me leader Mohammed sign"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
               {
-            "name": "Count Numbers from 1 to 5",
+                "simpleResponse": {
+                  "textToSpeech": "ok I will show you but first I will explain what does it mean"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Leader Sign",
+                  "params": {
+                    "number": "$number"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+              {
+            "name": "Count Fingers",
             "availability": {
                 "deviceClasses": [
                     {
@@ -438,14 +469,11 @@
                 ]
             },
             "intent": {
-                "name": "Count Numbers",
+                "name": "Count Fingers",
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "Count Numbers",
-                        "Count numbers from 1 to 5",
-                        "Count numbers from 1 too 5",
-                        "account Numbers"
+                        "IF How many finger you have?"
                     ]
                 }
             },
@@ -455,12 +483,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Counting Numbers"
+                                    "textToSpeech": "Hmm let me check"
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "Counting Numbers",
+                                    "command": "Count Fingers",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -583,7 +611,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Bye Have a good day"
+                                    "textToSpeech": "Bye see you later"
                                 }
                             },
                             {
@@ -673,7 +701,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Hooraay, Let us play memory sequence Game"
+                                    "textToSpeech": "Let us play memory sequence Game, press the start button to begin"
                                 }
                             },
                             {
@@ -745,8 +773,7 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "I am going out",
-                        "am out"
+                        "I am going out"
                     ]
                 }
             },
@@ -761,7 +788,7 @@
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "Out",
+                                    "command": "out",
                                      "params": {
                                         "number": "$number"
                                     }
