@@ -34,25 +34,27 @@ class behaviours:
 	def LeaderMohammed (self):
 		self.obj.write (b'm')
 		while true:
-			sleep (2)	
-			if (self.obj.read == 'e'):
-				call (['espeak', 'Love'])
-				self.obj.write (b'a')
-				sleep (2)
-			if (self.obj.read == 'v'):
-				call (['espeak', 'Victory'])
-				self.obj.write (b'v')
-				sleep (2)
-			if (self.obj.read == 'i'):
-				call (['espeak', 'Win']) 
-				self.obj.write (b'd')
+			if (self.obj.inWaiting()>0):
+				sleep (1)	
+				if (self.obj.read == b'e'):
+					call (['espeak', 'Love'])
+					self.obj.write (b'a')
+					sleep (1)
+				if (self.obj.read == b'v'):
+					call (['espeak', 'Victory'])
+					self.obj.write (b'v')
+					sleep (1)
+				if (self.obj.read == b'i'):
+					call (['espeak', 'Win']) 
+					self.obj.write (b'd')
 
 	def countingFingers(self):
 		self.obj.write(b'c') 
 		while true:
-			sleep (2)
-			if (self.obj.read == 'c'): 
-				call (['espeak', 'I have 5 fingers'])
+			if (self.obj.inWaiting()>0):
+				sleep (1)
+				if (self.obj.read == b'c'): 
+					call (['espeak', 'I have 5 fingers'])
 		
 	def thumbUp(self):
 		self.obj.write(b't')
@@ -68,26 +70,31 @@ class behaviours:
 		
 	def PlaySRP(self):
 		self.obj.write(b'p') 
-		while true: 
-			sleep (2)
-			if (self.obj.read () == 'w'):
-				call (['espeak', 'win'])
-			#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
-			elif (self.obj.read () == 'l'):
-				call (['espeak', 'lose'])
-			#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
-			elif (self.obj.read () == 't'):
-				call (['espeak', 'oh we did the same move, let us play again'])
-				self.obj.write (b'p')
+		#while true:
+			#if (self.obj.inWaiting()>0):
+		while (self.obj.inWaiting()>0):
+				sleep (1)
+				if (self.obj.read () == b'w'):
+					call (['espeak', 'win'])
+				#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
+				elif (self.obj.read () == b'l'):
+					call (['espeak', 'lose'])
+				#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
+				elif (self.obj.read () == b't'):
+					call (['espeak', 'oh we did the same move, let us play again'])
+					self.obj.write (b'p')
 
 	def Memory(self):
 		self.obj.write(b's')
 		while true:
-			sleep (10) 
-			if (self.obj.read () == 'a'):		
-				call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
-			elif (self.obj.read () == 'b'):
-				call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
+			if (self.obj.inWaiting()>0):
+				sleep (1) 
+				if (self.obj.read () == b'a'):
+					call (['espeak', 'win'])		
+					#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
+				elif (self.obj.read () == b'b'):
+					call (['espeak', 'lose'])
+					#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
 	def HandWakeUp(self):
 		self.obj.write(b'w')
