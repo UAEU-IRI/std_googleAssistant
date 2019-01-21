@@ -70,17 +70,17 @@ class behaviours:
 		
 	def PlaySRP(self):
 		self.obj.write(b'p') 
-		#while true:
-			#if (self.obj.inWaiting()>0):
-		while (self.obj.inWaiting()>0):
-				sleep (1)
-				if (self.obj.read () == b'w'):
+		while (self.obj.inWaiting()<1):
+			pass
+		temp=self.obj.read ()
+				#sleep (1)
+		if (temp== bytes(b'w')):
 					call (['espeak', 'win'])
 				#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
-				elif (self.obj.read () == b'l'):
+		elif (temp == bytes(b'l')):
 					call (['espeak', 'lose'])
 				#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
-				elif (self.obj.read () == b't'):
+		elif (temp == bytes(b't')):
 					call (['espeak', 'oh we did the same move, let us play again'])
 					self.obj.write (b'p')
 
