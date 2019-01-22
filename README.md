@@ -1,6 +1,8 @@
 # std_googleAssistant
 This repository .... [describe what this repo. is for..]
 
+#### [google asssitant library documentation](https://developers.google.com/assistant/sdk/reference/library/python/)
+
 
 #### [Google Assistant Instructions](https://github.com/UAEU-IRI/std_googleAssistant/wiki/Google-Assistant)
 
