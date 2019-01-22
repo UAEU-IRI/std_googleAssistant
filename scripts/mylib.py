@@ -68,30 +68,32 @@ class behaviours:
 		
 	def PlaySRP(self):
 		self.obj.write(b'p') 
+		sleep(5)
 		while (self.obj.inWaiting()<1):
 			pass
 		temp=self.obj.read ()
 		if (temp == bytes(b'w')):
-					call (['espeak', 'win'])
-				#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
+					#call (['espeak', 'win'])
+				call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 
 		elif (temp == bytes(b'l')):
-					call (['espeak', 'lose'])
-				#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
+					#call (['espeak', 'lose'])
+				call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav']) 
 		elif (temp == bytes(b't')):
 					call (['espeak', 'oh we did the same move, let us play again'])
 					self.obj.write (b'p')
 
 	def Memory(self):
 		self.obj.write(b's')
+		sleep(5)
 		while (self.obj.inWaiting()<1):
 			pass
 		temp=self.obj.read ()
 		if (temp == bytes(b'a')):
-					call (['espeak', 'win'])		
-					#call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
+					#call (['espeak', 'win'])		
+					call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav']) 	
 		elif (temp == bytes(b'b')):
-					call (['espeak', 'lose'])
-					#call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
+					#call (['espeak', 'lose'])
+					call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
 		
 	def HandWakeUp(self):
 		self.obj.write(b'w')

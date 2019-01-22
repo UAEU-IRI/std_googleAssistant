@@ -33,6 +33,7 @@ from google.assistant.library.device_helpers import register_device
 #from mylib import victoryFunction
 #from mylib import closeHand
 from mylib import behaviours
+from time import sleep
 
 try:
     FileNotFoundError
@@ -177,9 +178,10 @@ def main():
                 print(WARNING_NOT_REGISTERED)
 
         for event in events:
+            #assistant.send_text_query("pose for the camera")
+            #sleep(5)
             if event.type == EventType.ON_START_FINISHED and args.query:
                 assistant.send_text_query(args.query)
-
             process_event(event)
 
 
