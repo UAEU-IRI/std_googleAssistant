@@ -86,7 +86,7 @@ def process_event(event):
             elif(a[0]=='Saying Bye'):
                 object.Bye()
             elif(a[0]=='Play SRP'):
-                object.PlaySRP()
+                object.PlaySRP(assistant.send_text_query("pose for the camera"))
             elif(a[0]=='Memory Game'):
                 object.Memory()
             elif(a[0]=='Relax'):
@@ -179,7 +179,7 @@ def main():
 
         for event in events:
             #assistant.send_text_query("pose for the camera")
-            #sleep(5)
+            sleep(5)
             if event.type == EventType.ON_START_FINISHED and args.query:
                 assistant.send_text_query(args.query)
             process_event(event)
