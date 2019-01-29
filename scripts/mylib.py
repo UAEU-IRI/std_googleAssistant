@@ -4,8 +4,9 @@ from time import sleep
 from subprocess import call
    
 class behaviours:
-    def __init__(self):
+    def __init__(self): #,assistant
         self.obj = serial.Serial('/dev/ttyACM0',9600)
+        #self.assis=assistant
 
     def VoiceHandler(self):
         while (self.obj.inWaiting()<1):
@@ -68,10 +69,10 @@ class behaviours:
     
     def LeaderMohammed (self):
         self.obj.write (b'm')
-        VoiceHandler()
-        #while (self.obj.inWaiting()<1):
-        #    pass
-        #temp=self.obj.read ()
+        #VoiceHandler()
+        while (self.obj.inWaiting()<1):
+            pass
+        temp=self.obj.read ()
         if (temp == bytes(b'e')):
                     call (['espeak', 'Love'])
                     self.obj.write (b'a')
@@ -84,12 +85,12 @@ class behaviours:
 
     def countingFingers(self):
         self.obj.write(b'c') 
-        VoiceHandler()
-        #while (self.obj.inWaiting()<1):
-        #    pass
-        #temp=self.obj.read ()
-        #if (temp == bytes(b'c')): 
-        #            call (['espeak', 'I have 5 fingers'])
+        #VoiceHandler()
+        while (self.obj.inWaiting()<1):
+            pass
+        temp=self.obj.read ()
+        if (temp == bytes(b'c')): 
+                    call (['espeak', 'I have 5 fingers'])
         
     def thumbUp(self):
         self.obj.write(b't')
@@ -105,36 +106,36 @@ class behaviours:
         
     def PlaySRP(self, func):
         self.obj.write(b'p') 
-        VoiceHandler()
-        #while (self.obj.inWaiting()<1):
-        #    pass
-        #temp=self.obj.read().decode()
-        #if (temp == str('w')):
-        #            call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
-        #            sleep(1)
-        #            call (['espeak', 'win'])
-        #elif (temp == str('l')):
-        #            call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
-        #           sleep(1)
-        #           call (['espeak', 'Lose'])
-        #elif (temp == str('t')):
-        #            call (['espeak', 'oh we did the same move, let us play again'])
-        #            self.obj.write (b'p')
+        #VoiceHandler()
+        while (self.obj.inWaiting()<1):
+            pass
+        temp=self.obj.read().decode()
+        if (temp == str('w')):
+                    call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
+                    sleep(1)
+                    call (['espeak', 'win'])
+        elif (temp == str('l')):
+                    call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
+                    sleep(1)
+                    call (['espeak', 'Lose'])
+        elif (temp == str('t')):
+                    call (['espeak', 'oh we did the same move, let us play again'])
+                    self.obj.write (b'p')
 
     def Memory(self):
         self.obj.write(b's')
-        VoiceHandler()
-        #while (self.obj.inWaiting()<1):
-        #    pass
-        #temp=self.obj.read ()
-        #if (temp == bytes(b'a')):       
-        #            call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
-        #            sleep(1)
-        #            call (['espeak', 'win'])
-        #elif (temp == bytes(b'b')):
-        #            call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
-        #            sleep(1)
-        #            call (['espeak', 'Lose'])
+        #VoiceHandler()
+        while (self.obj.inWaiting()<1):
+            pass
+        temp=self.obj.read ()
+        if (temp == bytes(b'a')):       
+                    call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
+                    sleep(1)
+                    call (['espeak', 'win'])
+        elif (temp == bytes(b'b')):
+                    call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
+                    sleep(1)
+                    call (['espeak', 'Lose'])
         
     def HandWakeUp(self):
         self.obj.write(b'w')

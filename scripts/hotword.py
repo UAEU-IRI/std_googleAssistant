@@ -179,7 +179,6 @@ def main():
 
         for event in events:
             #assistant.send_text_query("pose for the camera")
-            sleep(5)
             if event.type == EventType.ON_START_FINISHED and args.query:
                 assistant.send_text_query(args.query)
             process_event(event)
