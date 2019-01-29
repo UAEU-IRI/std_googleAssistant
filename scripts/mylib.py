@@ -4,9 +4,9 @@ from time import sleep
 from subprocess import call
    
 class behaviours:
-    def __init__(self): #,assistant
+    def __init__(self,assistant):
         self.obj = serial.Serial('/dev/ttyACM0',9600)
-        #self.assis=assistant
+        self.assis=assistant
 
     def VoiceHandler(self):
         while (self.obj.inWaiting()<1):
@@ -74,13 +74,16 @@ class behaviours:
             pass
         temp=self.obj.read ()
         if (temp == bytes(b'e')):
-                    call (['espeak', 'Love'])
+                    self.assis.send_text_query("love")
+                    #call (['espeak', 'Love'])
                     self.obj.write (b'a')
         if (temp == bytes(b'v')):
-                    call (['espeak', 'Victory'])
+                    self.assis.send_text_query("Victory")
+                    #call (['espeak', 'Victory'])
                     self.obj.write (b'v')
         if (temp == bytes(b'i')):
-                    call (['espeak', 'Win']) 
+                    self.assis.send_text_query("Win")
+                    #call (['espeak', 'Win']) 
                     self.obj.write (b'd')
 
     def countingFingers(self):
@@ -90,7 +93,8 @@ class behaviours:
             pass
         temp=self.obj.read ()
         if (temp == bytes(b'c')): 
-                    call (['espeak', 'I have 5 fingers'])
+                    self.assis.send_text_query("fingers")
+                    #call (['espeak', 'I have 5 fingers'])
         
     def thumbUp(self):
         self.obj.write(b't')
@@ -113,13 +117,16 @@ class behaviours:
         if (temp == str('w')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
                     sleep(1)
-                    call (['espeak', 'win'])
+                    self.assis.send_text_query("win")
+                    #call (['espeak', 'win'])
         elif (temp == str('l')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
                     sleep(1)
-                    call (['espeak', 'Lose'])
+                    self.assis.send_text_query("lose")
+                    #call (['espeak', 'Lose'])
         elif (temp == str('t')):
-                    call (['espeak', 'oh we did the same move, let us play again'])
+                    self.assis.send_text_query("tie")
+                    #call (['espeak', 'oh we did the same move, let us play again'])
                     self.obj.write (b'p')
 
     def Memory(self):
@@ -131,11 +138,13 @@ class behaviours:
         if (temp == bytes(b'a')):       
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
                     sleep(1)
-                    call (['espeak', 'win'])
+                    self.assis.send_text_query("win")
+                    #call (['espeak', 'win'])
         elif (temp == bytes(b'b')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
                     sleep(1)
-                    call (['espeak', 'Lose'])
+                    self.assis.send_text_query("lose")
+                    #call (['espeak', 'Lose'])
         
     def HandWakeUp(self):
         self.obj.write(b'w')
