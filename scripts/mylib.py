@@ -111,6 +111,7 @@ class behaviours:
     def PlaySRP(self, func):
         self.obj.write(b'p') 
         #VoiceHandler()
+        sleep(3)
         while (self.obj.inWaiting()<1):
             pass
         temp=self.obj.read().decode()

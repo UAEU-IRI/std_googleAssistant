@@ -474,7 +474,8 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "IF How many finger you have?"
+                        "IF How many finger you have?",
+                        "is How many finger you have?"
                     ]
                 }
             },

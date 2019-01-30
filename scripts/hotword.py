@@ -96,7 +96,7 @@ def process_event(event):
 
 def main():
     global object
-    object = behaviours()
+    object = behaviours(Assistant)
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--device-model-id', '--device_model_id', type=str,
