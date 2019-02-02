@@ -1090,6 +1090,88 @@
             }
         },
         {
+            "name": "Fun",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Fun",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "How do you feel about google?"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "ha ha ha I got you"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Funny",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+         {
+            "name": "bts",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "bts",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Play a self love kpop song"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Hoorayy I like to dance to BTS Idol song"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "bts",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
             "name": "MAIN",
             "availability": {
                 "deviceClasses": [
