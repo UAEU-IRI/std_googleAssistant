@@ -157,6 +157,16 @@ class behaviours:
     def Out(self):
         self.obj.write(b'u')
       
+    def BTS(self):
+        self.obj.write(b'z')
+        sleep(1)
+        call(['aplay','/home/pi/std_googleAssistant/scripts/Voice/IDOL.wav'])
+
+    def Funny(self):
+        self.obj.write(b'y')
+        sleep(1)
+        call(['aplay','/home/pi/std_googleAssistant/scripts/Voice/Funny1.wav'])
+         
 class Servo:
     def __init__(self):
         GPIO.setmode(GPIO.BOARD)
