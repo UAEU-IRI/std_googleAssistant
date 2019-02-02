@@ -91,6 +91,10 @@ def process_event(event):
                 object.Memory()
             elif(a[0]=='Relax'):
                 object.finishResponse()
+            elif(a[0]=='Funny'):
+                object.Funny()
+            elif(a[0]=='bts'):
+                object.BTS()
     except:
         pass
 
