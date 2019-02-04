@@ -434,7 +434,16 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "show me leader Mohammed sign"
+            "show me leader Mohammed sign",
+            "show me leader Muhammad sign",
+            "show me Sheikh Mohammed sign",
+            "show me Sheikh Muhammad sign",
+            "Show me",
+            "Sheikh Muhammad sign",
+            "leader Muhammad sign",
+            "sign",
+            "Shake Muhammad sign",
+            "Sheikha Muhammad sign"
           ]
         }
       },
@@ -474,8 +483,11 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "IF How many fingers you have?",
-                        "is How many fingers you have?"
+                        "IF How many fingers you have",
+                        "is How many fingers you have",
+                        "Count fingers",
+                        "Count Singers",
+                        "count fingers"
                     ]
                 }
             },
@@ -559,8 +571,8 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "Hi How are you?",
-                        "High How are you?",
+                        "Hi How are you",
+                        "High How are you",
                         "Hye How are you"
                     ]
                 }
@@ -603,7 +615,12 @@
                 "trigger": {
                     "queryPatterns": [
                         "Bi",
-                        "Bye"
+                        "Bye",
+                        "see you soon",
+                        "see you later",
+                        "goodbye",
+                        "see you tomorrow",
+                        "see you later fellow"
                     ]
                 }
             },
@@ -619,6 +636,49 @@
                             {
                                 "deviceExecution": {
                                     "command": "Saying Bye",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "On",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "On",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "start",
+                        "hand on",
+                        "arm on"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": ""
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "ON",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -775,7 +835,8 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "I am going out"
+                        "I am going out",
+                        "I'm going out"
                     ]
                 }
             },
@@ -1103,7 +1164,7 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "How do you feel about google?"
+                        "How do you feel about google"
                     ]
                 }
             },
@@ -1144,7 +1205,12 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "Play a self love kpop song"
+                        "Play BTS Korean song",
+                        "Play a self love BTS song",
+                        "Play a self-love BTS song",
+                        "Play BTS Idol",
+                        "play safe love BTS song",
+                        "Dance to BTS Idol"
                     ]
                 }
             },

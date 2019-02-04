@@ -52,6 +52,8 @@ WARNING_NOT_REGISTERED = """
 
 def process_event(event):
     global object 
+    #GUI()
+    #object.On()
     print(event)
     if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
         object.HandWakeUp()
@@ -86,7 +88,7 @@ def process_event(event):
             elif(a[0]=='Saying Bye'):
                 object.Bye()
             elif(a[0]=='Play SRP'):
-                object.PlaySRP(assistant.send_text_query("pose for the camera"))
+                object.PlaySRP()
             elif(a[0]=='Memory Game'):
                 object.Memory()
             elif(a[0]=='Relax'):
@@ -95,6 +97,8 @@ def process_event(event):
                 object.Funny()
             elif(a[0]=='bts'):
                 object.BTS()
+            elif(a[0]=='ON'):
+                object.On()    
     except:
         pass
 
