@@ -96,13 +96,18 @@ class behaviours:
 
     def countingFingers(self):
         self.obj.write(b'c') 
+        call (['espeak', '1'])
+        call (['espeak', '2'])
+        call (['espeak', '3'])
+        call (['espeak', '4'])
+        call (['espeak', '5'])
+        call (['espeak', 'I have 5 fingers'])
         #VoiceHandler()
-        while (self.obj.inWaiting()<1):
-            pass
-        temp=self.obj.read().decode()
-        if (temp == str('c')): 
+        #while (self.obj.inWaiting()<1):
+        #    pass
+        #temp=self.obj.read().decode()
+        #if (temp == str('c')): 
                     #self.assis.send_text_query("fingers")
-                    call (['espeak', 'I have 5 fingers'])
         
     def On(self):
         self.obj.write(b'q') 
