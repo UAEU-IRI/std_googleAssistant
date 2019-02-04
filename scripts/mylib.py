@@ -96,11 +96,11 @@ class behaviours:
 
     def countingFingers(self):
         self.obj.write(b'c') 
-        call (['espeak', '1'])
-        call (['espeak', '2'])
-        call (['espeak', '3'])
-        call (['espeak', '4'])
-        call (['espeak', '5'])
+        #call (['espeak', '1'])
+        #call (['espeak', '2'])
+        #call (['espeak', '3'])
+        #call (['espeak', '4'])
+        #call (['espeak', '5'])
         call (['espeak', 'I have 5 fingers'])
         #VoiceHandler()
         #while (self.obj.inWaiting()<1):
