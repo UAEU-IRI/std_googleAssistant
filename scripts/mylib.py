@@ -129,6 +129,7 @@ class behaviours:
         self.obj.write(b'p') 
         #VoiceHandler()
         #sleep(3)
+        call (['aplay', '/home/pi/std_googleAssistant/scripts/Voice/Intro.wav'])
         while (self.obj.inWaiting()<1):
             pass
         temp=self.obj.read().decode()
