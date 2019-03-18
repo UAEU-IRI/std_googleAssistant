@@ -1,0 +1,187 @@
+void alive(){
+ 
+ w.write(WRIST_LEFT);
+
+  delay(700);
+
+  w.write(WRIST_CENTER);
+
+  delay(2000);
+
+  w.write(WRIST_RIGHT);
+ 
+  delay(700);
+ 
+ w.write(WRIST_CENTER);
+
+  delay(700);
+ 
+ t.write(RELAX);
+  
+i.write(RELAX);
+ 
+ m.write(RELAX_M);
+  
+r.write(RELAX);
+ 
+ p.write(RELAX);
+ 
+ delay(1000);
+  
+t.write(THUMB_OPEN);
+
+  i.write(INDEX_OPEN);
+ 
+ m.write(MIDDLE_OPEN);
+ 
+ r.write(RING_OPEN);
+  
+p.write(PINKY_OPEN);
+ 
+ delay(5000);
+
+}
+ 
+
+
+ 
+void dance1(){
+
+  serial.read('y');
+ 
+  t.write(THUMB_OPEN);
+ 
+ i.write(INDEX_CLOSE);
+ 
+ m.write(MIDDLE_CLOSE);
+ 
+ r.write(RING_CLOSE);
+ 
+ p.write(PINKY_CLOSE);
+ 
+ delay(700);
+ 
+ t.write(THUMB_OPEN);
+
+  i.write(INDEX_OPEN);
+  
+m.write(MIDDLE_OPEN);
+ 
+ r.write(RING_OPEN);
+
+  p.write(PINKY_OPEN);
+ 
+ delay(700);
+  
+ t.write(THUMB_OPEN);
+
+  i.write(INDEX_CLOSE);
+ 
+ m.write(MIDDLE_CLOSE);
+ 
+ r.write(RING_CLOSE);
+ 
+ p.write(PINKY_CLOSE);
+ 
+ delay(700);
+
+  t.write(THUMB_OPEN);
+  
+i.write(INDEX_OPEN);
+  
+m.write(MIDDLE_OPEN);
+ 
+ r.write(RING_OPEN);
+  
+p.write(PINKY_OPEN);
+ 
+ delay(700);
+
+  
+w.write(WRIST_LEFT);
+  
+delay(700);
+  
+w.write(WRIST_RIGHT);
+  
+   
+delay(700);
+     
+
+
+  w.write(WRIST_LEFT);
+
+  delay(700);
+ 
+ w.write(WRIST_RIGHT);
+
+
+delay(1000);
+
+}
+
+
+
+
+
+
+void dance2(){
+ 
+ serial.read('z');
+  
+t.write(THUMB_CLOSE);
+ 
+ i.write(INDEX_OPEN);
+  
+m.write(MIDDLE_OPEN);
+ 
+ r.write(RING_OPEN);
+  
+p.write(PINKY_OPEN);
+  
+delay(700);
+  
+t.write(THUMB_OPEN);
+  
+i.write(INDEX_CLOSE);
+  
+m.write(MIDDLE_CLOSE);
+ 
+ r.write(RING_CLOSE);
+  
+p.write(PINKY_CLOSE);
+  
+delay(700);
+
+  
+w.write(WRIST_LEFT);
+  
+delay(700);
+ 
+ w.write(WRIST_CENTER);
+ 
+  
+ delay(700)
+;   
+ 
+ w.write(WRIST_LEFT);
+  
+delay(700);
+  
+w.write(WRIST_CENTER);
+  
+  
+delay(700);
+  
+  
+w.write(WRIST_LEFT);
+  
+delay(700);
+  
+w.write(WRIST_CENTER);
+  
+ 
+ delay(1000);
+  
+  
+  

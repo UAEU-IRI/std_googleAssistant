@@ -33,6 +33,7 @@ from google.assistant.library.device_helpers import register_device
 #from mylib import victoryFunction
 #from mylib import closeHand
 from mylib import behaviours
+from time import sleep
 
 try:
     FileNotFoundError
@@ -51,6 +52,8 @@ WARNING_NOT_REGISTERED = """
 
 def process_event(event):
     global object 
+    #GUI()
+    #object.On()
     print(event)
     if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
         object.HandWakeUp()
@@ -60,7 +63,7 @@ def process_event(event):
                 object.victoryFunction()
             elif(a[0]=='Closing Hand'):
                 object.closeHand()
-            elif(a[0]=='Opening Hand'):
+            elif(a[0]=='High Five'):
                 object.openHand()
             elif(a[0]=='Showing number one'):
                 object.showNumberOne()
@@ -72,10 +75,14 @@ def process_event(event):
                 object.showNumberFour()
             elif(a[0]=='Showing number five'):
                 object.showNumberFive()
-            elif(a[0]=='Counting Numbers'):
-                object.countingNumbers()
+            elif(a[0]=='Leader Sign'):
+                object.LeaderMohammed()
+            elif(a[0]=='Counting Fingers'):
+                object.countingFingers()
             elif(a[0]=='Thumb Up'):
                 object.thumbUp()
+            elif(a[0]=='out'):
+                object.Out()
             elif(a[0]=='Saying Hi'):
                 object.Hi()
             elif(a[0]=='Saying Bye'):
@@ -86,12 +93,18 @@ def process_event(event):
                 object.Memory()
             elif(a[0]=='Relax'):
                 object.finishResponse()
+            elif(a[0]=='Funny'):
+                object.Funny()
+            elif(a[0]=='bts'):
+                object.BTS()
+            elif(a[0]=='ON'):
+                object.On()    
     except:
         pass
 
 def main():
     global object
-    object = behaviours()
+    object = behaviours(Assistant)
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--device-model-id', '--device_model_id', type=str,
@@ -173,9 +186,9 @@ def main():
                 print(WARNING_NOT_REGISTERED)
 
         for event in events:
+            #assistant.send_text_query("pose for the camera")
             if event.type == EventType.ON_START_FINISHED and args.query:
                 assistant.send_text_query(args.query)
-
             process_event(event)
 
 

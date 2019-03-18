@@ -1,7 +1,8 @@
+
 {
     "manifest": {
-        "displayName": "Blinky light",
-        "invocationName": "Blinky light",
+        "displayName": "IF-Intelligent Fellow",
+        "invocationName": "IF-Intelligent Fellow",
         "category": "PRODUCTIVITY"
     },
     "actions": [
@@ -70,7 +71,8 @@
                 "parameters": [],
                 "trigger": {
                     "queryPatterns": [
-                        "victory sign"
+                        "Let us take a picture",
+                        "pose for the camera"
                     ]
                 }
             },
@@ -80,7 +82,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "hooray! I'm victorious!"
+                                    "textToSpeech": "oh I like that"
                                 }
                             },
                             {
@@ -150,7 +152,7 @@
             }
         },
         {
-            "name": "Open Hand",
+            "name": "High Five",
             "availability": {
                 "deviceClasses": [
                     {
@@ -159,24 +161,14 @@
                 ]
             },
             "intent": {
-                "name": "Open Hand",
+                "name": "High Five",
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "open hand",
-                        "Open fingers",
-                        "open singers",
-                        "hand open",
-                        "han open",
-                        "fingers open",
-                        "hand Open",
-                        "fingers Open",
-                        "open fingers",
-                        "Open hand",
-                        "Open han",
-                        "han Open",
-                        "open",
-                        "open han"
+                        "High Five",
+                        "Hi Five",
+                        "High Fife",
+                        "Hi Fife"
                     ]
                 }
             },
@@ -186,12 +178,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Opening Hand"
+                                    "textToSpeech": "High Five"
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "Opening Hand",
+                                    "command": "High Five",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -428,8 +420,57 @@
                 }
             }
         },
+         {
+      "name": "Leader Mohammed",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Leader Mohammed",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "show me leader Mohammed sign",
+            "show me leader Muhammad sign",
+            "show me Sheikh Mohammed sign",
+            "show me Sheikh Muhammad sign",
+            "Show me",
+            "Sheikh Muhammad sign",
+            "leader Muhammad sign",
+            "sign",
+            "Shake Muhammad sign",
+            "Sheikha Muhammad sign"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
               {
-            "name": "Count Numbers from 1 to 5",
+                "simpleResponse": {
+                  "textToSpeech": "ok I will show you but first I will explain what does it mean"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Leader Sign",
+                  "params": {
+                    "number": "$number"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+              {
+            "name": "Count Fingers",
             "availability": {
                 "deviceClasses": [
                     {
@@ -438,13 +479,15 @@
                 ]
             },
             "intent": {
-                "name": "Count Numbers",
+                "name": "Count Fingers",
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "Count Numbers",
-                        "Count numbers from 1 to 5",
-                        "Count numbers from 1 too 5"
+                        "IF How many fingers you have",
+                        "is How many fingers you have",
+                        "Count fingers",
+                        "Count Singers",
+                        "count fingers"
                     ]
                 }
             },
@@ -454,12 +497,12 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Counting Numbers 1     2     3     4     5"
+                                    "textToSpeech": "Hmm let me check"
                                 }
                             },
                             {
                                 "deviceExecution": {
-                                    "command": "Counting Numbers",
+                                    "command": "Count Fingers",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -528,8 +571,8 @@
                 "parameters": [                ],
                 "trigger": {
                     "queryPatterns": [
-                        "Hi How are you?",
-                        "High How are you?",
+                        "Hi How are you",
+                        "High How are you",
                         "Hye How are you"
                     ]
                 }
@@ -572,7 +615,12 @@
                 "trigger": {
                     "queryPatterns": [
                         "Bi",
-                        "Bye"
+                        "Bye",
+                        "see you soon",
+                        "see you later",
+                        "goodbye",
+                        "see you tomorrow",
+                        "see you later fellow"
                     ]
                 }
             },
@@ -582,12 +630,55 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Bye Have a good day"
+                                    "textToSpeech": "Bye see you later"
                                 }
                             },
                             {
                                 "deviceExecution": {
                                     "command": "Saying Bye",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "On",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "On",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "start",
+                        "hand on",
+                        "arm on"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": ""
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "ON",
                                      "params": {
                                         "number": "$number"
                                     }
@@ -628,7 +719,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Hooray, let us play rock paper Scissors"
+                                    "textToSpeech": "let us play rock paper Scissors, press the start button to begin, Button 1 for rock, button 2 for Paper, button 3 for Scissors"
                                 }
                             },
                             {
@@ -672,7 +763,7 @@
                         "items": [
                             {
                                 "simpleResponse": {
-                                    "textToSpeech": "Hooraay, Let us play memory sequence Game"
+                                    "textToSpeech": "Let us play memory sequence Game, press the start button to begin"
                                 }
                             },
                             {
@@ -719,6 +810,422 @@
                             {
                                 "deviceExecution": {
                                     "command": "Relax",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Out",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Out",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "I am going out",
+                        "I'm going out"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Enjoy your day"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "out",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "win",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "win",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "win"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "You won"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "win",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "LMwin",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Win",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Win"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Win"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "LMWin",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "lose",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "lose",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "lose"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "I won, thank you for the game"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "lose",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "LMVictory",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "LMVictory",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Victory"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Victory"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "LMVictory",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "love",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "love",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "love"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Love"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Love",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "fingers",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "fingers",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "fingers"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "I have 5 fingers"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "5 fingers",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+                {
+            "name": "tie",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "tie",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "tie"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "oh we did the same move, let us play again"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "tie",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        {
+            "name": "Fun",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "Fun",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "How do you feel about google"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "ha ha ha I got you"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "Funny",
+                                     "params": {
+                                        "number": "$number"
+                                    }
+                                    
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+         {
+            "name": "bts",
+            "availability": {
+                "deviceClasses": [
+                    {
+                        "assistantSdkDevice": {}
+                    }
+                ]
+            },
+            "intent": {
+                "name": "bts",
+                "parameters": [                ],
+                "trigger": {
+                    "queryPatterns": [
+                        "Play BTS Korean song",
+                        "Play a self love BTS song",
+                        "Play a self-love BTS song",
+                        "Play BTS Idol",
+                        "play safe love BTS song",
+                        "Dance to BTS Idol"
+                    ]
+                }
+            },
+            "fulfillment": {
+                "staticFulfillment": {
+                    "templatedResponse": {
+                        "items": [
+                            {
+                                "simpleResponse": {
+                                    "textToSpeech": "Hoorayy I like to dance to BTS Idol song"
+                                }
+                            },
+                            {
+                                "deviceExecution": {
+                                    "command": "bts",
                                      "params": {
                                         "number": "$number"
                                     }
