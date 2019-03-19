@@ -1,4 +1,5 @@
 from tkinter import *
+
 class GUI1:
     def __init__(self, master):
         frame = Frame(master)
@@ -11,6 +12,7 @@ class GUI1:
         self.quitButton = Button(frame, command=frame.quit, bg="white")
         self.quitButton.config(image=photoE)
         self.quitButton.pack()
+        
 root= Tk()
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Home.png")
 photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
