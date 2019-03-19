@@ -1,4 +1,6 @@
+#might not use it
 from tkinter import *
+
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
@@ -19,6 +21,7 @@ class GUI:
      self.button1.grid(row=0, column=1)
      self.button2.grid(row=1, column=1)
      self.button3.grid(row=2, column=1)
+        
 root= Tk()
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Piano.png")
 photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Play.png")
