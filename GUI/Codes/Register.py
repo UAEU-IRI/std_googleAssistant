@@ -1,4 +1,5 @@
 from tkinter import *
+
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
@@ -16,6 +17,7 @@ class GUI:
      self.entry_1.grid(row=0, column=1)
      self.entry_2.grid(row=1, column=1)
      self.entry_3.grid(row=2, column=1)
+    
 root= Tk()
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Home.png")
 photoN = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Next.png")
