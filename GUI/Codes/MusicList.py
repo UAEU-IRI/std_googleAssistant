@@ -1,22 +1,42 @@
 from tkinter import *
+import webbrowser
+
+def openPiano():
+ webbrowser.open(P, new=new)
+
+def openArabicSongs():
+ webbrowser.open(AS, new=new)
+
+def openRelaxation():
+ webbrowser.open(R, new=new)
+
+def openEnglishSongs():
+ webbrowser.open(ES, new=new)
+
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
      frame.pack()
      frame.configure(background='white')
-     self.button1 = Button(frame, bg="white")
+     self.button1 = Button(frame, bg="white", command=openPiano)
      self.button1.config(image=photo1)
-     self.button2 = Button(frame,bg="white")
+     self.button2 = Button(frame,bg="white", command=openArabicSongs)
      self.button2.config(image=photo2)
-     self.button3 = Button(frame,bg="white")
+     self.button3 = Button(frame,bg="white", command=openRelaxation)
      self.button3.config(image=photo3)
-     self.button4 = Button(frame, bg="white")
+     self.button4 = Button(frame, bg="white", command=openEnglishSongs)
      self.button4.config(image=photo4)
      self.button1.grid(row=2,column=0)
      self.button2.grid(row=2, column=1)
      self.button3.grid(row=2, column=2)
      self.button4.grid(row=2, column=3)
+    
 root= Tk()
+new = 1
+P = "https://soundcloud.com/user-523895603/sets/piano/s-gS99x"
+AS = "https://soundcloud.com/user-523895603/sets/arabic-songs/s-zrNLZ"
+R = "https://soundcloud.com/user-523895603/sets/nature/s-fTUVx"
+ES = "https://soundcloud.com/user-523895603/sets/english-songs/s-VLtCf"
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Music.png")
 label = Label(root,image=photo)
 photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
