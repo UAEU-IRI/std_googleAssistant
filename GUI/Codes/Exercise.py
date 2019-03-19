@@ -1,4 +1,5 @@
 from tkinter import *
+
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
@@ -16,6 +17,7 @@ class GUI:
      self.button2.grid(row=2, column=1)
      self.button3.grid(row=2, column=2)
      self.button4.grid(row=2, column=3)
+    
 root= Tk()
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exercise1.png")
 label = Label(root,image=photo)
