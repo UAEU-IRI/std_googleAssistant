@@ -1,6 +1,6 @@
+#might not use it
 from tkinter import *
 from subprocess import call
-
 
 def Scars(self, master):
  frame = Frame(master)
@@ -34,6 +34,7 @@ class GUI:
      self.button2.grid(row=1, column=1)
      self.button3.grid(row=2, column=1)
      self.button4.grid(row=3, column=1)
+     
 root= Tk()
 #global object
 photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/English1.png")
