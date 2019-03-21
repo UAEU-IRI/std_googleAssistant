@@ -30,7 +30,7 @@ class GUI:
      self.button2.grid(row=2, column=1)
      self.button3.grid(row=2, column=2)
      self.button4.grid(row=2, column=3)
-    
+     
 root= Tk()
 new = 1
 P = "https://soundcloud.com/user-523895603/sets/piano/s-gS99x"
