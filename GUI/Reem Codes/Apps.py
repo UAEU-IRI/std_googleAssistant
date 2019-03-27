@@ -2,24 +2,31 @@ from tkinter import *
 from subprocess import call
 
 def News():
+ root.destroy()
  call(['python', 'News.py'])
 
 def Quran():
+ root.destroy()
  call(['python', 'Quran.py'])
 
 def Music():
+ root.destroy()
  call(['python', 'MusicList.py'])
 
 def AudioBooks():
+ root.destroy()
  call(['python', 'AudioBooks.py'])
 
 def Exercise():
+ root.destroy()
  call(['python', 'Exercise.py'])
 
 def Games():
+ root.destroy()
  call(['python', 'Games.py'])
 
 def Back():
+ root.destroy()
  call(['python', 'Home.py'])
  
 class GUI:

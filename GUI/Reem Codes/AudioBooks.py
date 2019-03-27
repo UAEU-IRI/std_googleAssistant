@@ -9,6 +9,7 @@ def PeterPan():
  webbrowser.open(PP, new=new)
  
 def Back():
+ root.destroy()
  call(['python', 'Apps.py'])
 
 class GUI:

@@ -3,6 +3,7 @@ import webbrowser
 from subprocess import call
 
 def Back():
+ root.destroy()
  call(['python', 'Apps.py'])
 
 def openMRA():
@@ -13,7 +14,6 @@ def openAA():
 
 def openAAlN():
   webbrowser.open(AAlN, new=new)
-
 
 def openHAB():
  webbrowser.open(HAB, new=new)

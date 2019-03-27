@@ -2,6 +2,7 @@ from tkinter import *
 from subprocess import call
 
 def Back():
+ root.destroy()
  call(['python', 'Register.py'])
 
 class GUI:

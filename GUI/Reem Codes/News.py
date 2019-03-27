@@ -3,6 +3,7 @@ import webbrowser
 from subprocess import call
 
 def Back():
+ root.destroy()
  call(['python', 'Apps.py'])
 
 def openEY():

@@ -2,9 +2,11 @@ from tkinter import *
 from subprocess import call
 
 def Login():
+    root.destroy()
     call(['python', 'Login.py'])
 
 def Register():
+    root.destroy()
     call(['python', 'Register.py'])
     
 class GUI1:

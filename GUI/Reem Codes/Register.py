@@ -2,9 +2,11 @@ from tkinter import *
 from subprocess import call
 
 def Next():
+ root.destroy()
  call(['python', 'Characters.py'])
 
 def Back():
+ root.destroy()
  call(['python', 'Home.py'])
  
 class GUI:

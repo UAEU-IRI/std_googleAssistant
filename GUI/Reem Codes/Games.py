@@ -2,12 +2,15 @@ from tkinter import *
 from subprocess import call
 
 def Color():
+ root.destroy()
  call(['python', 'colorGame.py'])
 
 def TicTacToe():
+ root.destroy()
  call(['python', 'tictactoe.py'])
 
 def Back():
+ root.destroy()
  call(['python', 'Apps.py'])
 
 class GUI:
