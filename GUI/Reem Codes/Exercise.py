@@ -1,5 +1,9 @@
 from tkinter import *
 import webbrowser
+from subprocess import call
+
+def Back():
+ call(['python', 'Apps.py'])
 
 def openYogaM():
  webbrowser.open(YogaM, new=new)
@@ -30,6 +34,7 @@ class GUI:
      self.button2.grid(row=0, column=1)
      self.button3.grid(row=1, column=0)
      self.button4.grid(row=1, column=1)
+     
 root= Tk()
 new=1
 GymN = "https://www.youtube.com/playlist?list=PL4tPnorvk5lD6EhgiR4QyQ9QGVe0_nEgY"
@@ -40,7 +45,7 @@ photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI
 label = Label(root,image=photo)
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

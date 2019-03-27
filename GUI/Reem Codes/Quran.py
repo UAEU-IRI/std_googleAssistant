@@ -1,5 +1,9 @@
 from tkinter import *
 import webbrowser
+from subprocess import call
+
+def Back():
+ call(['python', 'Apps.py'])
 
 def openMRA():
  webbrowser.open(MRA, new=new)
@@ -45,7 +49,7 @@ photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GU
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Quran1.png")
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

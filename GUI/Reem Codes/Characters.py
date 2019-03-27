@@ -1,4 +1,8 @@
 from tkinter import *
+from subprocess import call
+
+def Back():
+ call(['python', 'Register.py'])
 
 class GUI:
     def __init__(self, master):
@@ -15,23 +19,22 @@ class GUI:
      self.button4.config(image=photo4)
      self.button1.grid(row=0,column=0)
      self.button2.grid(row=0, column=1)
-     self.button3.grid(row=1, column=0)
-     self.button4.grid(row=1, column=1)
+     self.button3.grid(row=0, column=2)
+     self.button4.grid(row=0, column=3)
 
 root= Tk()
 #photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Home.png")
 #label = Label(root,image=photo)
 label_1 = Label(root, text="Choose Your Fellow", bg="white", font=("Agency FB", 25))
-label_1.pack(side="top", anchor=N)
+label_1.pack(anchor=N)
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)
 back.pack(side="left",anchor=NW)
 quitButton.pack(side="right", anchor=NE)
-#label.pack(side="top", anchor=N)
 photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Robo.png")
 photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Kuro.png")
 photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/BabyG.png")

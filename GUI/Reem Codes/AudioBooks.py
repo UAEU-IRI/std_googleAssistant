@@ -1,23 +1,25 @@
 from tkinter import *
 import webbrowser
+from subprocess import call
 
 def LittlePrincess():
  webbrowser.open(LP, new=new)
 
 def PeterPan():
  webbrowser.open(PP, new=new)
+ 
+def Back():
+ call(['python', 'Apps.py'])
 
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
      frame.pack()
      frame.configure(background='white')
-     #self.button1 = Button(frame, bg="white")
-     #self.button1.config(image=photo1)
-     #self.button2 = Button(frame,bg="white")
-     #self.button2.config(image=photo2)
-     self.button1 = Button(frame, text="Peter Pan", bg="white", fg="black", font=("Helvetica", 14), command=PeterPan)
-     self.button2 = Button(frame, text="Little Princess", bg="white", fg="black", font=("Helvetica", 14), command=LittlePrincess)
+     self.button1 = Button(frame, bg="white", command=LittlePrincess)
+     self.button1.config(image=photo1)
+     self.button2 = Button(frame,bg="white", command=PeterPan)
+     self.button2.config(image=photo2)
      self.button1.grid(row=0,column=0)
      self.button2.grid(row=0, column=1)
 
@@ -29,7 +31,9 @@ photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI
 label = Label(root,image=photo)
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/alittlePrincee.png")
+photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/PeterPan.png")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

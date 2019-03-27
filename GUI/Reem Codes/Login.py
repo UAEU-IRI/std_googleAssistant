@@ -1,4 +1,12 @@
 from tkinter import *
+from subprocess import call
+
+def Next():
+ call(['python', 'Apps.py'])
+
+def Back():
+ call(['python', 'Home.py'])
+ 
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
@@ -12,14 +20,15 @@ class GUI:
      self.label_2.grid(row=1, sticky=E)
      self.entry_1.grid(row=0, column=1)
      self.entry_2.grid(row=1, column=1)
+     
 root= Tk()
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Login.png")
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
 photoN = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Next.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
-next = Button(root, bg="white")
+next = Button(root, bg="white", command= Next)
 next.config(image=photoN)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)
