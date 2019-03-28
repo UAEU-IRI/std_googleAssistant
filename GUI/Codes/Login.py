@@ -1,4 +1,13 @@
 from tkinter import *
+from subprocess import call
+
+def Next():
+ root.destroy()
+ call(['python', 'Apps.py'])
+
+def Back():
+ root.destroy()
+ call(['python', 'Home.py'])
 
 class GUI:
     def __init__(self, master):
@@ -19,9 +28,9 @@ photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Login.png")
 photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
 photoN = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Next.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
-next = Button(root, bg="white")
+next = Button(root, bg="white", command= Next)
 next.config(image=photoN)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

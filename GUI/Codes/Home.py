@@ -1,13 +1,22 @@
 from tkinter import *
+from subprocess import call
+
+def Login():
+    root.destroy()
+    call(['python', 'Login.py'])
+
+def Register():
+    root.destroy()
+    call(['python', 'Register.py'])
 
 class GUI1:
     def __init__(self, master):
         frame = Frame(master)
         frame.pack()
         frame.configure(background='white')
-        self.button1 = Button(frame, bg="white")
+        self.button1 = Button(frame, bg="white", command=Login)
         self.button1.config(image=photo1)
-        self.button2 = Button(frame, bg="white")
+        self.button2 = Button(frame, bg="white", command=Register)
         self.button2.config(image=photo2)
         self.button1.grid(row=0, column=0)
         self.button2.grid(row=0, column=1)
@@ -24,5 +33,6 @@ label = Label(root, image=photo)
 label.pack()
 b= GUI1(root)
 root.title("Intelligent Fellow")
+root.geometry("1000x920")
 root.configure(background='white')
 root.mainloop()

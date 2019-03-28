@@ -1,4 +1,33 @@
 from tkinter import *
+from subprocess import call
+
+def News():
+ root.destroy()
+ call(['python', 'News.py'])
+
+def Quran():
+ root.destroy()
+ call(['python', 'Quran.py'])
+
+def Music():
+ root.destroy()
+ call(['python', 'MusicList.py'])
+
+def AudioBooks():
+ root.destroy()
+ call(['python', 'AudioBooks.py'])
+
+def Exercise():
+ root.destroy()
+ call(['python', 'Exercise.py'])
+
+def Games():
+ root.destroy()
+ call(['python', 'Games.py'])
+
+def Back():
+ root.destroy()
+ call(['python', 'Home.py'])
 
 class GUI:
     def __init__(self, master):
@@ -9,17 +38,17 @@ class GUI:
      self.button1.config(image=photo1)
      self.button2 = Button(frame,bg="white")
      self.button2.config(image=photo2)
-     self.button3 = Button(frame,bg="white")
+     self.button3 = Button(frame, bg="white", command=News)
      self.button3.config(image=photo3)
-     self.button4 = Button(frame,bg="white")
+     self.button4 = Button(frame, bg="white", command=Quran)
      self.button4.config(image=photo4)
-     self.button5 = Button(frame,bg="white")
+     self.button5 = Button(frame, bg="white", command=Music)
      self.button5.config(image=photo5)
-     self.button6 = Button(frame,bg="white")
+     self.button6 = Button(frame, bg="white", command=AudioBooks)
      self.button6.config(image=photo6)
-     self.button7 = Button(frame, bg="white")
+     self.button7 = Button(frame, bg="white", command=Exercise)
      self.button7.config(image=photo7)
-     self.button8 = Button(frame, bg="white")
+     self.button8 = Button(frame, bg="white", command=Games)
      self.button8.config(image=photo8)
      self.button9 = Button(frame, bg="white")
      self.button9.config(image=photo9)
@@ -45,7 +74,7 @@ photo8 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Games.png")
 photo9 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Weather.png")
 photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

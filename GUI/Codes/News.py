@@ -1,5 +1,10 @@
 from tkinter import *
 import webbrowser
+from subprocess import call
+
+def Back():
+ root.destroy()
+ call(['python', 'Apps.py'])
 
 def openEY():
  webbrowser.open(EY, new=new)
@@ -37,7 +42,7 @@ photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
 photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/ematatalyoum.png")
 photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/AlBayan.png")
 photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/GlobalNews.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

@@ -74,7 +74,7 @@ photo8 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GU
 photo9 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Weather.png")
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

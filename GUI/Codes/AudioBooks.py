@@ -1,11 +1,16 @@
 from tkinter import *
 import webbrowser
+from subprocess import call
 
 def LittlePrincess():
  webbrowser.open(LP, new=new)
 
 def PeterPan():
  webbrowser.open(PP, new=new)
+ 
+def Back():
+ root.destroy()
+ call(['python', 'Apps.py'])
 
 class GUI:
     def __init__(self, master):
@@ -29,7 +34,7 @@ photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
 photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/PeterPan.png")
 photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/alittlePrincee.png")
-back = Button(root, bg="white")
+back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)

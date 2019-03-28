@@ -32,6 +32,7 @@ class GUI:
      self.entry_2.grid(row=1, column=1)
      self.entry_3.grid(row=2, column=1)
      self.entry_4.grid(row=3, column=1)
+     
 root= Tk()
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/SignUp.png")
 photoN = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Next.png")
