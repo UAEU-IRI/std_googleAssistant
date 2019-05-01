@@ -86,6 +86,7 @@ class AnimatedGIF(Label, object):
 
 if __name__ == "__main__":
     root = Tk()
+    root.config(bg="white")
     l = AnimatedGIF(root, "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/CHARACTERS/Logo.gif")
     photoN = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Next.png")
     next = Button(root, bg="white")

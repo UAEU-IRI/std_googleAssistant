@@ -5,6 +5,15 @@ import webbrowser
 def News():
  root.destroy()
  call(['python', 'News.py'])
+ 
+def Calculator():
+ root.destroy()
+ call(['python', 'Calculator.py'])
+ 
+def Remind():
+ root.destroy()
+ call(['python', 'ReminderF.py'])
+ call(['python', 'Remind.py'])
 
 def Quran():
  root.destroy()
@@ -31,16 +40,16 @@ def Weather():
 
 def Back():
  root.destroy()
- call(['python', 'Home.py'])
+ call(['python', 'Characters.py'])
  
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
      frame.pack()
      frame.configure(background='white')
-     self.button1 = Button(frame, bg="white")
+     self.button1 = Button(frame, bg="white", command=Remind)
      self.button1.config(image=photo1)
-     self.button2 = Button(frame,bg="white")
+     self.button2 = Button(frame,bg="white", command=Calculator)
      self.button2.config(image=photo2)
      self.button3 = Button(frame, bg="white", command=News)
      self.button3.config(image=photo3)
@@ -70,7 +79,7 @@ root= Tk()
 new=1
 weather = "https://weather.com/weather/today/l/24.21,55.67?par=google"
 photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders.png")
-photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Calendar.png")
+photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/calculator.png")
 photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/News.png")
 photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Quran.png")
 photo5 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Music1.png")
@@ -89,5 +98,5 @@ quitButton.pack(side="right", anchor=NE)
 b= GUI(root)
 root.title("Intelligent Fellow")
 root.geometry("1000x920")
-root.configure(background='white')
+root.configure(bg='white')
 root.mainloop()

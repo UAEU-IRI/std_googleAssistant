@@ -3,7 +3,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Register.py'])
+ call(['python', 'LogoGif.py'])
 
 class GUI:
     def __init__(self, master):
