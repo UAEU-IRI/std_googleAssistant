@@ -1,5 +1,6 @@
 from tkinter import *
 from subprocess import call
+import webbrowser
 
 def News():
  root.destroy()
@@ -24,6 +25,9 @@ def Exercise():
 def Games():
  root.destroy()
  call(['python', 'Games.py'])
+ 
+def Weather():
+ webbrowser.open(weather, new=new)
 
 def Back():
  root.destroy()
@@ -50,7 +54,7 @@ class GUI:
      self.button7.config(image=photo7)
      self.button8 = Button(frame, bg="white", command=Games)
      self.button8.config(image=photo8)
-     self.button9 = Button(frame, bg="white")
+     self.button9 = Button(frame, bg="white", command=Weather)
      self.button9.config(image=photo9)
      self.button1.grid(row=0,column=1)
      self.button2.grid(row=0, column=2)
@@ -63,6 +67,8 @@ class GUI:
      self.button9.grid(row=2, column=3)
 
 root= Tk()
+new=1
+weather = "https://weather.com/weather/today/l/24.21,55.67?par=google"
 photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders.png")
 photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Calendar.png")
 photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/News.png")

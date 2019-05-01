@@ -4,10 +4,10 @@ from tkinter import messagebox
 
 colours = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
 score = 0
-timeleft = 60
+timeleft = 30
 
 def startGame(event):
-    if timeleft == 60:
+    if timeleft == 30:
         countdown()
     nextColour()
 

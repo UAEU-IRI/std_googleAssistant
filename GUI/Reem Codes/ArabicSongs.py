@@ -1,9 +1,9 @@
 from tkinter import *
 import webbrowser
 
-
 def openweb():
  webbrowser.open(url, new=new)
+ 
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
