@@ -3,32 +3,43 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Register.py'])
+ call(['python', 'LogoGif.py'])
+ 
+def Kuro():
+ root.destroy()
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
+
+def Robo():
+ root.destroy()
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
+ 
+def Baby():
+ root.destroy()
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
      frame.pack()
      frame.configure(background='white')
-     self.button1 = Button(frame, bg="white")
+     self.button1 = Button(frame, bg="white", command=Robo)
      self.button1.config(image=photo1)
-     self.button2 = Button(frame,bg="white")
+     self.button2 = Button(frame,bg="white", command=Kuro)
      self.button2.config(image=photo2)
-     self.button3 = Button(frame,bg="white")
+     self.button3 = Button(frame,bg="white",command=Baby)
      self.button3.config(image=photo3)
-     self.button4 = Button(frame, bg="white")
-     self.button4.config(image=photo4)
+     #self.button4 = Button(frame, bg="white")
+     #self.button4.config(image=photo4)
      self.button1.grid(row=0,column=0)
      self.button2.grid(row=0, column=1)
      self.button3.grid(row=0, column=2)
-     self.button4.grid(row=0, column=3)
+     #self.button4.grid(row=0, column=3)
 
 root= Tk()
 #photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Home.png")
 #label = Label(root,image=photo)
 label_1 = Label(root, text="Choose Your Fellow", bg="white", font=("Agency FB", 25))
-label_1 = Label(root, text="Choose Your Fellow", bg="white", font=("Helvetica", 20))
-label_1.pack(side="top", anchor=N)
+label_1.pack(anchor=N)
 photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
 back = Button(root, bg="white", command=Back)
@@ -37,11 +48,10 @@ quitButton = Button(root, command=root.quit, bg="white")
 quitButton.config(image=photoE)
 back.pack(side="left",anchor=NW)
 quitButton.pack(side="right", anchor=NE)
-#label.pack(side="top", anchor=N)
-photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Robo.PNG")
-photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Kuro.PNG")
-photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/BabyG.PNG")
-photo4 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Johnny.PNG")
+photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Robo.png")
+photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Kuro.png")
+photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/BabyG.png")
+#photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Johnny.png")
 b= GUI(root)
 root.geometry("1000x920")
 root.title("Intelligent Fellow")

@@ -3,18 +3,11 @@ import serial
 from time import sleep
 from subprocess import call
 from tkinter import*
+import webbrowser
    
 class behaviours:
-    def __init__(self,assistant):
+    def __init__(self):
         self.obj = serial.Serial('/dev/ttyACM0',9600)
-        #self.assis=assistant
-
-    def GUI(self):
-        root = Tk()
-        photo = PhotoImage(file="Logo.png")
-        label = Label(root, image=photo)
-        label.pack()
-        root.mainloop()
 
     def VoiceHandler(self):
         while (self.obj.inWaiting()<1):
@@ -185,6 +178,62 @@ class behaviours:
     def Funny(self):
         self.obj.write(b'y')
         call(['aplay','/home/pi/std_googleAssistant/scripts/Voice/Funny1.wav'])
+        
+    def IFA(self):
+        self.obj.write(b'n')
+        call(['python','/home/pi/std_googleAssistant/GUI/Codes/LogoGif.py'])
+        
+    def Characters(self):
+        self.obj.write(b'n')
+        call(['python','/home/pi/std_googleAssistant/GUI/Codes/Characters.py'])
+
+    def Apps(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
+
+    def Remind(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/ReminderFRobo.py'])
+
+    def Calculator(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/CalculatorRobo.py'])
+
+    def News(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/NewsRobo.py'])
+
+    def Quran(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/QuranRobo.py'])
+
+    def Music(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/MusicRobo.py'])
+        
+    def Audiobooks(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AudioBooksRobo.py'])
+
+    def Exercise(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/ExerciseRobo.py'])
+
+    def Games(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/GamesRobo.py'])
+
+    def Weather(self):
+        self.obj.write(b'n')
+        webbrowser.open(weather, new=new)
+
+    def TTT(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/tictactoeRobo.py'])
+
+    def Color(self):
+        self.obj.write(b'n')
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/colorGameRobo.py'])
          
 class Servo:
     def __init__(self):

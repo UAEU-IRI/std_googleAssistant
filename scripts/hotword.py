@@ -98,13 +98,41 @@ def process_event(event):
             elif(a[0]=='bts'):
                 object.BTS()
             elif(a[0]=='ON'):
-                object.On()    
+                object.On()
+            elif (a[0] == 'IFA'):
+                object.IFA()
+            elif (a[0] == 'Characters'):
+                object.Characters()
+            elif (a[0] == 'Apps'):
+                object.Apps()
+            elif (a[0] == 'Remind'):
+                object.Remind()
+            elif (a[0] == 'Calculator'):
+                object.Calculator()
+            elif (a[0] == 'News'):
+                object.News()
+            elif (a[0] == 'Quran'):
+                object.Quran()
+            elif (a[0] == 'Music'):
+                object.Music()
+            elif (a[0] == 'AudioBooks'):
+                object.Audiobooks()
+            elif (a[0] == 'Exercise'):
+                object.Exercise()
+            elif (a[0] == 'Games'):
+                object.Games()
+            elif (a[0] == 'Weather'):
+                object.Weather()
+            elif (a[0] == 'TTT'):
+                object.TTT()
+            elif (a[0] == 'Color'):
+                object.Color()
     except:
         pass
 
 def main():
     global object
-    object = behaviours(Assistant)
+    object = behaviours()
     parser = argparse.ArgumentParser(
         formatter_class=argparse.RawTextHelpFormatter)
     parser.add_argument('--device-model-id', '--device_model_id', type=str,
