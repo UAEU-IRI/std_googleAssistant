@@ -4,43 +4,43 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'News.py'])
+    call(['python', 'NewsRobo.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'Calculator.py'])
+    call(['python', 'CalculatorRobo.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderF.py'])
-    call(['python', 'Remind.py'])
+    call(['python', 'ReminderFRobo.py'])
+    call(['python', 'RemindRobo.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'Quran.py'])
+    call(['python', 'QuranRobo.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicList.py'])
+    call(['python', 'MusicListRobo.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooks.py'])
+    call(['python', 'AudioBooksRobo.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'Exercise.py'])
+    call(['python', 'ExerciseRobo.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'Games.py'])
+    call(['python', 'GamesRobo.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)
 
 def Back():
     root.destroy()
-    call(['python', 'Characters.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Characters.py'])
 
 class GUI:
     def __init__(self, master):
@@ -96,7 +96,7 @@ quitButton.config(image=photoE)
 back.pack(side="left", anchor=NW)
 quitButton.pack(side="right", anchor=NE)
 b = GUI(root)
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Robo Apps")
 root.geometry("1000x920")
 root.configure(bg='white')
 root.mainloop()

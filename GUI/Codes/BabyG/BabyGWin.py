@@ -8,7 +8,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 
 class AnimatedGIF(Label, object):
@@ -150,11 +150,11 @@ if __name__ == "__main__":
     root = Tk()
     root.config(bg="white")
 
-    l = AnimatedGIF(root, "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/CHARACTERS/Robo/RoboWin.gif")
+    l = AnimatedGIF(root, "/home/pi/std_googleAssistant/GUI/CHARACTERS/BabyG/BabyGWin.gif")
 
-    photoN = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Next.png")
+    photoN = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Next.png")
 
-    next = Button(root, bg="white", command=Back)
+    next = Button(root, bg="white",command=Back)
 
     next.config(image=photoN)
 

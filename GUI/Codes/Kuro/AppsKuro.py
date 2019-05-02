@@ -1,52 +1,46 @@
 from tkinter import *
 from subprocess import call
-
+import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'News.py'])
-
+    call(['python', 'NewsKuro.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'Calculator.py'])
-
+    call(['python', 'CalculatorKuro.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderF.py'])
-    call(['python', 'Remind.py'])
-
+    call(['python', 'ReminderFKuro.py'])
+    call(['python', 'RemindKuro.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'Quran.py'])
-
+    call(['python', 'QuranKuro.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicList.py'])
-
+    call(['python', 'MusicListKuro.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooks.py'])
-
+    call(['python', 'AudioBooksKuro.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'Exercise.py'])
-
+    call(['python', 'ExerciseKuro.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'Games.py'])
+    call(['python', 'GamesKuro.py'])
 
+def Weather():
+    webbrowser.open(weather, new=new)
 
 def Back():
     root.destroy()
-    call(['python', 'Characters.py'])
-
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Characters.py'])
 
 class GUI:
     def __init__(self, master):
@@ -69,7 +63,7 @@ class GUI:
         self.button7.config(image=photo7)
         self.button8 = Button(frame, bg="white", command=Games)
         self.button8.config(image=photo8)
-        self.button9 = Button(frame, bg="white")
+        self.button9 = Button(frame, bg="white", command=Weather)
         self.button9.config(image=photo9)
         self.button1.grid(row=0, column=1)
         self.button2.grid(row=0, column=2)
@@ -81,8 +75,9 @@ class GUI:
         self.button8.grid(row=2, column=2)
         self.button9.grid(row=2, column=3)
 
-
 root = Tk()
+new = 1
+weather = "https://weather.com/weather/today/l/24.21,55.67?par=google"
 photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Reminders.png")
 photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/calculator.png")
 photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/News.png")
@@ -101,7 +96,7 @@ quitButton.config(image=photoE)
 back.pack(side="left", anchor=NW)
 quitButton.pack(side="right", anchor=NE)
 b = GUI(root)
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Kuro Apps")
 root.geometry("1000x920")
 root.configure(background='white')
 root.mainloop()
