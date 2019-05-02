@@ -5,7 +5,7 @@ import time
 import json
 from subprocess import call
 
-REM_FILE = "remindersRobo.txt"
+REM_FILE = "/home/pi/std_googleAssistant/GUI/Codes/Robo/remindersRobo.txt"
 reminders = []
 
 def Back():

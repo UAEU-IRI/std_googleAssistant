@@ -110,7 +110,10 @@
         "trigger": {
           "queryPatterns": [
             "Open intelligent fellow application",
-            "Open fellow application"
+            "Open fellow application",
+            "Open application",
+            "Open if application",
+            "Open our application"
           ]
         }
       },

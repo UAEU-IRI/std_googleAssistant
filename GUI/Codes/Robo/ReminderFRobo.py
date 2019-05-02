@@ -2,7 +2,7 @@ from tkinter import *
 import json
 from subprocess import call
 
-REM_FILE = "remindersRobo.txt"
+REM_FILE = "/home/pi/std_googleAssistant/GUI/Codes/Robo/remindersRobo.txt"
 
 def Back():
     root.destroy()
@@ -67,6 +67,7 @@ class REMINDER():
             f.write(json.dumps(reminders))
             f.truncate()
         root.destroy()
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
     
     def cancelReminder(self):
         root.destroy()

@@ -4,7 +4,7 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'NewsBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/NewsBabyG.py'])
 
 def Calculator():
     root.destroy()

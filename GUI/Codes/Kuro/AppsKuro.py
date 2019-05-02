@@ -4,36 +4,36 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'NewsKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/NewsKuro.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'CalculatorKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/CalculatorKuro.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderFKuro.py'])
-    call(['python', 'RemindKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/ReminderFKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/RemindKuro.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'QuranKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/QuranKuro.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicListKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/MusicListKuro.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooksKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/AudioBooksKuro.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'ExerciseKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/ExerciseKuro.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'GamesKuro.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/GamesKuro.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)

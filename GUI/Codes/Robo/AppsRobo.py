@@ -4,36 +4,36 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'NewsRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/NewsRobo.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'CalculatorRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/CalculatorRobo.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderFRobo.py'])
-    call(['python', 'RemindRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/ReminderFRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RemindRobo.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'QuranRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/QuranRobo.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicListRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/MusicListRobo.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooksRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AudioBooksRobo.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'ExerciseRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/ExerciseRobo.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'GamesRobo.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/GamesRobo.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)
