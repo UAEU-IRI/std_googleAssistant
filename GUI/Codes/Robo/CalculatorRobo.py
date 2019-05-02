@@ -6,7 +6,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 val = ""
 A = 0
@@ -152,7 +152,7 @@ quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
 root.geometry("1000x920")
-root.title("Calculator")
+root.title("IF Robo Calculator")
 data = StringVar()
 lbl = Label(
     root,

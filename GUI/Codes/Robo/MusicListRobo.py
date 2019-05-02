@@ -4,19 +4,23 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 def openPiano():
  webbrowser.open(P, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboSleep.py'])
 
 def openArabicSongs():
  webbrowser.open(AS, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboMusic.py'])
 
 def openRelaxation():
  webbrowser.open(R, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboSleep.py'])
 
 def openEnglishSongs():
  webbrowser.open(ES, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboMusic.py'])
 
 class GUI:
     def __init__(self, master):
@@ -59,6 +63,6 @@ photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Relaxation.png"
 photo4 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/English.png")
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Robo Music")
 root.configure(background='white')
 root.mainloop()

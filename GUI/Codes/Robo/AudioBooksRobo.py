@@ -4,22 +4,24 @@ from subprocess import call
 
 def LittlePrincess():
  webbrowser.open(LP, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RobotHi.py'])
 
 def PeterPan():
  webbrowser.open(PP, new=new)
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RobotHi.py'])
  
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
      frame.pack()
      frame.configure(background='white')
-     self.button1 = Button(frame, bg="white", command=LittlePrincess)
+     self.button1 = Button(frame, bg="white", command=PeterPan)
      self.button1.config(image=photo1)
-     self.button2 = Button(frame,bg="white", command=PeterPan)
+     self.button2 = Button(frame,bg="white", command=LittlePrincess)
      self.button2.config(image=photo2)
      self.button1.grid(row=0,column=0)
      self.button2.grid(row=0, column=1)
@@ -43,6 +45,6 @@ quitButton.pack(side="right", anchor=NE)
 label.pack(side="top", anchor=N)
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Robo Audiobooks")
 root.configure(background='white')
 root.mainloop()

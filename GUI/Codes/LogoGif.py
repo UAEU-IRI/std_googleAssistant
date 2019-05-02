@@ -2,6 +2,11 @@
 #adjusted Design
 from tkinter import *
 from PIL import Image, ImageTk
+from subprocess import call
+
+def Next():
+ root.destroy()
+ call(['python', 'Characters.py'])
 
 class AnimatedGIF(Label, object):
     def __init__(self, master, path, forever=True):
@@ -83,13 +88,14 @@ class AnimatedGIF(Label, object):
         self.stop_animation()
         super(AnimatedGIF, self).place_forget(**kwargs)
 
-
 if __name__ == "__main__":
     root = Tk()
     root.config(bg="white")
+    root.title("Intelligent Fellow")
+    root.geometry("1000x920")
     l = AnimatedGIF(root, "/home/pi/std_googleAssistant/GUI/CHARACTERS/Logo.gif")
     photoN = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Next.png")
-    next = Button(root, bg="white")
+    next = Button(root, bg="white", command=Next)
     next.config(image=photoN)
     next.pack(side="top", anchor=NE)
     l.pack()

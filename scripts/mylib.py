@@ -17,10 +17,14 @@ class behaviours:
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
                     sleep(1)
                     call (['espeak', 'win'])
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboWin.py'])
         elif (temp == str('l')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
                     sleep(1)
                     call (['espeak', 'Lose'])
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboLost.py'])
         elif (temp == str('t')):
                     call (['espeak', 'oh we did the same move, let us play again'])
                     self.obj.write (b'p')
@@ -28,11 +32,15 @@ class behaviours:
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/win.wav'])
                     sleep(1)
                     call (['espeak', 'win'])
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboWin.py'])
         elif (temp == str('b')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/lose.wav'])
                     sleep(1)
                     call (['espeak', 'Lose'])
-        elif (temp == str('c')): 
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboLost.py'])
+        elif (temp == str('c')):
                     call (['espeak', 'I have 5 fingers'])
         elif (temp == str('e')):
                     call (['espeak', 'Love'])
@@ -133,12 +141,18 @@ class behaviours:
         temp=self.obj.read().decode()
         if (temp == str('w')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/Voice/win.wav'])
+                    sleep(1)
                     #self.assis.send_text_query("win")
                     call (['espeak', 'win'])
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboWin.py'])
         elif (temp == str('l')):
                     call (['aplay', '/home/pi/std_googleAssistant/scripts/Voice/lose.wav'])
+                    sleep(1)
                     #self.assis.send_text_query("lose")
                     call (['espeak', 'Lose'])
+                    sleep(1)
+                    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboLost.py'])
         elif (temp == str('t')):
                     #self.assis.send_text_query("tie")
                     call (['espeak', 'oh we did the same move, let us play again'])

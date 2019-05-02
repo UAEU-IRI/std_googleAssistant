@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 def openYogaM():
  webbrowser.open(YogaM, new=new)
@@ -59,6 +59,6 @@ photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/morningYoga.png
 photo4 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/NightYoga.png")
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Robo Exercise")
 root.configure(background='white')
 root.mainloop()

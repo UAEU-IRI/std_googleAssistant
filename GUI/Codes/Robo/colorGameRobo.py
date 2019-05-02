@@ -1,6 +1,12 @@
 import tkinter
 import random
 from tkinter import messagebox
+from tkinter import *
+from subprocess import call
+
+def Back():
+ root.destroy()
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/GamesRobo.py'])
 
 colours = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
 score = 0
@@ -35,10 +41,22 @@ def win(timeleft):
     if(timeleft==0):
      ans = "Time is up, your score is: " +str(score)
      messagebox.showinfo("Score", ans)
+     call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RoboWin.py'])
       
 root = tkinter.Tk()
-root.title("COLOR GAME")
-root.geometry("500x250")
+root.title("Robo COLOR GAME")
+root.geometry("1000x920")
+photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Color1.png")
+label = Label(root,image=photo)
+photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
+back = Button(root, bg="white", command=Back)
+back.config(image=photoB)
+quitButton = Button(root, command=root.quit, bg="white")
+quitButton.config(image=photoE)
+back.pack(side="left",anchor=NW)
+quitButton.pack(side="right", anchor=NE)
+label.pack(side="top", anchor=N)
 instructions = tkinter.Label(root, text="Type in the color of the words, and not the word text!",fg="red",font=('Agency FB', 14))
 instructions.pack()
 scoreLabel = tkinter.Label(root, text="Press enter to start",font=('Agency FB', 14),fg="red")

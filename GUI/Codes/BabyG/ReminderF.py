@@ -1,8 +1,8 @@
 from tkinter import *
 import json
 
-# path to reminders.txt file
-REM_FILE = "C:/Users/Reemy/Downloads/desktop_reminder-master/desktop_reminder-master/reminders.txt"
+# path to remindersRobo.txt file
+REM_FILE = "C:/Users/Reemy/Downloads/desktop_reminder-master/desktop_reminder-master/remindersRobo.txt"
 
 class REMINDER():
 	def __init__(self):

@@ -3,15 +3,15 @@ from subprocess import call
 
 def Color():
  root.destroy()
- call(['python', 'colorGame.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/colorGameRobo.py'])
 
 def TicTacToe():
  root.destroy()
- call(['python', 'tictactoe.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/tictactoeRobo.py'])
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 class GUI:
     def __init__(self, master):
@@ -41,6 +41,6 @@ quitButton.pack(side="right", anchor=NE)
 label.pack(side="top", anchor=N)
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow Robo Games")
 root.configure(background='white')
 root.mainloop()

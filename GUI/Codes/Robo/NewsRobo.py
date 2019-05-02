@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/AppsRobo.py'])
 
 def openEY():
  webbrowser.open(EY, new=new)

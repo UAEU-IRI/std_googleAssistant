@@ -4,8 +4,8 @@ from datetime import datetime
 import time
 import json
 
-# path to reminders.txt file
-REM_FILE = "C:/Users/Reemy/Downloads/desktop_reminder-master/desktop_reminder-master/reminders.txt"
+# path to remindersRobo.txt file
+REM_FILE = "C:/Users/Reemy/Downloads/desktop_reminder-master/desktop_reminder-master/remindersRobo.txt"
 
 # list of reminders
 reminders = []
