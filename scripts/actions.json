@@ -138,6 +138,652 @@
       }
     },
     {
+      "name": "Arabic Songs",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Arabic Songs",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Arabic songs list"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "ArabicS",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "English Songs",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "English Songs",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open English songs list"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "EnglishS",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Relaxation",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Relaxation",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Relaxation list"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Relaxation",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "name": "Piano",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Piano",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Piano list"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Piano",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "EmiratY",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "EmiratY",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Emirat Alyoum page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "EmiratY",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Albayan",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Albayan",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Albayan news page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Bayan",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "GNews",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "GNews",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Global news page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "GlobalN",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Peter Pan",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Peter Pan",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Peter Pan Page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "PeterPan",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "LP",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "LP",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open little princess page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "LP",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "GymNadz",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "GymNadz",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open GymNadz page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "GymNadz",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Zumba",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Zumba",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Zumba Page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Zumba",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "MYoga",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "MYoga",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Morning Yoga page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "MYoga",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "NYoga",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "NYoga",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Night Yoga page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "NYoga",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Alafasy",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Alafasy",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Alafasy page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Alafasy",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Alminshawy",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Alminshawy",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Alminshawy page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Alminshawy",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "AhmedN",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "AhmedN",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Ahmed Alnufais page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "AhmedN",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+        {
+      "name": "Hazza",
+      "availability": {
+        "deviceClasses": [
+          {
+            "assistantSdkDevice": {}
+          }
+        ]
+      },
+      "intent": {
+        "name": "Hazza",
+        "parameters": [],
+        "trigger": {
+          "queryPatterns": [
+            "Open Hazza Albuloushi page"
+          ]
+        }
+      },
+      "fulfillment": {
+        "staticFulfillment": {
+          "templatedResponse": {
+            "items": [
+              {
+                "simpleResponse": {
+                  "textToSpeech": "Here is it"
+                }
+              },
+              {
+                "deviceExecution": {
+                  "command": "Hazza",
+                  "params": {}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
       "name": "Characters",
       "availability": {
         "deviceClasses": [
@@ -189,7 +835,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the apps page"
+            "Open apps page"
           ]
         }
       },
@@ -227,7 +873,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Reminder page"
+            "Open Reminder page"
           ]
         }
       },
@@ -265,7 +911,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the calculator page"
+            "Open calculator page"
           ]
         }
       },
@@ -303,7 +949,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the News page"
+            "Open News page"
           ]
         }
       },
@@ -341,7 +987,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Quran page"
+            "Open Quran page"
           ]
         }
       },
@@ -379,7 +1025,8 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Music List page"
+            "Open Music List page",
+            "Open Music page"
           ]
         }
       },
@@ -417,7 +1064,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Audiobooks page"
+            "Open Audiobooks page"
           ]
         }
       },
@@ -455,7 +1102,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Exercise page"
+            "Open Exercise page"
           ]
         }
       },
@@ -493,7 +1140,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Games page"
+            "Open Games page"
           ]
         }
       },
@@ -531,7 +1178,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the Weather page"
+            "Open Weather page"
           ]
         }
       },
@@ -569,7 +1216,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the tic tac toe game page"
+            "Open tic tac toe game page"
           ]
         }
       },
@@ -607,7 +1254,7 @@
         "parameters": [],
         "trigger": {
           "queryPatterns": [
-            "Open the color game page"
+            "Open color game page"
           ]
         }
       },

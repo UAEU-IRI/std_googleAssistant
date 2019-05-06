@@ -52,8 +52,6 @@ WARNING_NOT_REGISTERED = """
 
 def process_event(event):
     global object 
-    #GUI()
-    #object.On()
     print(event)
     if (event.type == EventType.ON_CONVERSATION_TURN_STARTED):
         object.HandWakeUp()
@@ -127,6 +125,40 @@ def process_event(event):
                 object.TTT()
             elif (a[0] == 'Color'):
                 object.Color()
+            elif (a[0] == 'ArabicS'):
+                object.ArabicS()
+            elif (a[0] == 'EnglishS'):
+                object.EnglishS()
+            elif (a[0] == 'Piano'):
+                object.Piano()
+            elif (a[0] == 'Relaxation'):
+                object.Relax()
+            elif (a[0] == 'EmiratY'):
+                object.EmiratY()
+            elif (a[0] == 'Bayan'):
+                object.Bayan()
+            elif (a[0] == 'GlobalN'):
+                object.GN()
+            elif (a[0] == 'PeterPan'):
+                object.PP()
+            elif (a[0] == 'LP'):
+                object.LP()
+            elif (a[0] == 'GymNadz'):
+                object.GymNadz()
+            elif (a[0] == 'Zumba'):
+                object.Zumba()
+            elif (a[0] == 'MYoga'):
+                object.MYoga()
+            elif (a[0] == 'NYoga'):
+                object.NYoga()
+            elif (a[0] == 'Alafasy'):
+                object.Alafasy()
+            elif (a[0] == 'Alminshawy'):
+                object.Alminshawy()
+            elif (a[0] == 'AhmedN'):
+                object.Ahmed()
+            elif (a[0] == 'Hazza'):
+                object.Hazza()
     except:
         pass
 
@@ -214,7 +246,6 @@ def main():
                 print(WARNING_NOT_REGISTERED)
 
         for event in events:
-            #assistant.send_text_query("pose for the camera")
             if event.type == EventType.ON_START_FINISHED and args.query:
                 assistant.send_text_query(args.query)
             process_event(event)
