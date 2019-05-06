@@ -1,8 +1,12 @@
-#source code: http://code.activestate.com/recipes/580708-tkinter-animated-gif/
-#adjusted Design
-
+# source code: http://code.activestate.com/recipes/580708-tkinter-animated-gif/
+# adjusted Design
 from tkinter import *
 from PIL import Image, ImageTk
+from subprocess import call
+
+def Back():
+    root.destroy()
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
 
 class AnimatedGIF(Label, object):
     def __init__(self, master, path, forever=True):
@@ -84,13 +88,12 @@ class AnimatedGIF(Label, object):
         self.stop_animation()
         super(AnimatedGIF, self).place_forget(**kwargs)
 
-
 if __name__ == "__main__":
     root = Tk()
     root.config(bg="white")
-    l = AnimatedGIF(root, "/home/pi/std_googleAssistant/GUI/CHARACTERS/BabyG/BabyLose.gif")
+    l = AnimatedGIF(root, "/home/pi/std_googleAssistant/GUI/CHARACTERS/Kuro/KuroLick.gif")
     photoN = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Next.png")
-    next = Button(root, bg="white")
+    next = Button(root, bg="white", command=Back)
     next.config(image=photoN)
     next.pack(side="top", anchor=NE)
     l.pack()

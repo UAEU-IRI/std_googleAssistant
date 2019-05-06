@@ -1,3 +1,5 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 from tkinter import font
 from datetime import datetime
@@ -5,7 +7,7 @@ import time
 import json
 from subprocess import call
 
-REM_FILE = "remindersBabyG.txt"
+REM_FILE = "/home/pi/std_googleAssistant/GUI/Codes/BabyG/remindersBabyG.txt"
 reminders = []
 
 def Back():

@@ -1,4 +1,5 @@
-#tutorial in youtube
+# tutorial in youtube
+# adjusted the design
 import tkinter
 from tkinter import *
 from tkinter import messagebox

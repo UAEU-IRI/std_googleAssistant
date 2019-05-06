@@ -1,3 +1,5 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 import json
 from subprocess import call
@@ -67,6 +69,7 @@ class REMINDER():
             f.write(json.dumps(reminders))
             f.truncate()
         root.destroy()
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
     
     def cancelReminder(self):
         root.destroy()

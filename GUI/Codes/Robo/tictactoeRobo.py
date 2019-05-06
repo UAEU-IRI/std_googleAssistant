@@ -1,5 +1,5 @@
-# The code source from https://github.com/Lavakumar999/Python-Tkinter-FrameWork/blob/master/Tic-tac-toe.py
-# we did some edits like changing the design, and instead of 2 players we will adjust it to be a 1 player versus the computer
+# Source code: https://github.com/Lavakumar999/Python-Tkinter-FrameWork/blob/master/Tic-tac-toe.py
+# adjusted design
 from tkinter import *
 from tkinter import messagebox
 from subprocess import call

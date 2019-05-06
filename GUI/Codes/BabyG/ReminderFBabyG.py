@@ -1,8 +1,10 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 import json
 from subprocess import call
 
-REM_FILE = "remindersBabyG.txt"
+REM_FILE = "/home/pi/std_googleAssistant/GUI/Codes/BabyG/remindersBabyG.txt"
 
 def Back():
     root.destroy()
@@ -67,6 +69,7 @@ class REMINDER():
             f.write(json.dumps(reminders))
             f.truncate()
         root.destroy()
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
     
     def cancelReminder(self):
         root.destroy()

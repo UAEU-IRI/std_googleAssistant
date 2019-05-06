@@ -1,3 +1,5 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 import json
 from subprocess import call

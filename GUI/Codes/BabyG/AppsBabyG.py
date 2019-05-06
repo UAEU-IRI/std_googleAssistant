@@ -8,32 +8,32 @@ def News():
 
 def Calculator():
     root.destroy()
-    call(['python', 'CalculatorBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/CalculatorBabyG.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderFBabyG.py'])
-    call(['python', 'RemindBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/ReminderFBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/RemindBabyG.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'QuranBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/QuranBabyG.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicListBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/MusicListBabyG.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooksBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/AudioBooksBabyG.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'ExerciseBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/ExerciseBabyG.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'GamesBabyG.py'])
+    call(['python', '/home/pi/std_googleAssistant/GUI/Codes/BabyG/GamesBabyG.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)

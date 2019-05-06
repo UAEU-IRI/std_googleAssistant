@@ -161,6 +161,7 @@ class behaviours:
     def Remind(self):
         self.obj.write(b'h')
         call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/ReminderFRobo.py'])
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/RemindRobo.py'])
 
     def Calculator(self):
         self.obj.write(b'h')
@@ -176,7 +177,7 @@ class behaviours:
 
     def Music(self):
         self.obj.write(b'h')
-        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/MusicRobo.py'])
+        call(['python', '/home/pi/std_googleAssistant/GUI/Codes/Robo/MusicListRobo.py'])
         
     def Audiobooks(self):
         self.obj.write(b'h')

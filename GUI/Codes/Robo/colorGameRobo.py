@@ -1,3 +1,5 @@
+# source code: https://www.tutorialspoint.com/color-game-using-tkinter-in-python
+# adjusted design
 import tkinter
 import random
 from tkinter import messagebox
