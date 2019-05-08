@@ -4,14 +4,14 @@ from tkinter import *
 import json
 from subprocess import call
 
-REM_FILE = "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/remindersRobo.txt"
+REM_FILE = "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/remindersBabyG.txt"
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 root = Tk()
-root.title("Intelligent Fellow Robo Reminder")
+root.title("Intelligent Fellow BabyG Reminder")
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders1.png")
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
@@ -69,7 +69,7 @@ class REMINDER():
             f.write(json.dumps(reminders))
             f.truncate()
         root.destroy()
-        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
     
     def cancelReminder(self):
         root.destroy()

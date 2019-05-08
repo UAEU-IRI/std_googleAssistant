@@ -1,3 +1,4 @@
+
 #source code: http://code.activestate.com/recipes/580708-tkinter-animated-gif/
 #adjusted Design
 from tkinter import *
@@ -6,7 +7,7 @@ from subprocess import call
 
 def Next():
  root.destroy()
- call(['python', 'Characters.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Characters.py'])
 
 class AnimatedGIF(Label, object):
     def __init__(self, master, path, forever=True):

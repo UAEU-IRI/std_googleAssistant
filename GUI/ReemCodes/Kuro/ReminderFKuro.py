@@ -1,15 +1,17 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 import json
 from subprocess import call
 
-REM_FILE = "remindersRobo.txt"
+REM_FILE = "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/remindersKuro.txt"
 
 def Back():
-	root.destroy()
-	call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
-	
+    root.destroy()
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
+
 root = Tk()
-root.title("Intelligent Fellow Robo Reminder")
+root.title("Intelligent Fellow Kuro Reminder")
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders1.png")
 photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
 photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
@@ -21,7 +23,7 @@ back.pack(side="left", anchor=NW)
 quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
-	
+
 class REMINDER():
     def __init__(self):
         self.position_window()
@@ -67,6 +69,7 @@ class REMINDER():
             f.write(json.dumps(reminders))
             f.truncate()
         root.destroy()
+        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
     
     def cancelReminder(self):
         root.destroy()

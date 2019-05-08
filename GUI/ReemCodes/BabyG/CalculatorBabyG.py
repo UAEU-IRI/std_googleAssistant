@@ -1,4 +1,5 @@
-#tutorial in youtube
+# tutorial in youtube
+# adjusted the design
 import tkinter
 from tkinter import *
 from tkinter import messagebox
@@ -6,7 +7,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 val = ""
 A = 0
@@ -140,9 +141,9 @@ def result():
             val = str(C)
 
 root = tkinter.Tk()
-photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/calculator1.png")
-photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
-photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
+photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/calculator1.png")
+photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
 back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
@@ -152,7 +153,7 @@ quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
 root.geometry("1000x920")
-root.title("Calculator")
+root.title("IF BabyG Calculator")
 data = StringVar()
 lbl = Label(
     root,

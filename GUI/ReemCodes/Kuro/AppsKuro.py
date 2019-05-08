@@ -4,43 +4,43 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'NewsRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/NewsKuro.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'CalculatorRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/CalculatorKuro.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderFRobo.py'])
-    call(['python', 'RemindRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/ReminderFKuro.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/RemindKuro.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'QuranRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/QuranKuro.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicListRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/MusicListKuro.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooksRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AudioBooksKuro.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'ExerciseRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/ExerciseKuro.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'GamesRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/GamesKuro.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Characters.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Characters.py'])
 
 class GUI:
     def __init__(self, master):
@@ -96,7 +96,7 @@ quitButton.config(image=photoE)
 back.pack(side="left", anchor=NW)
 quitButton.pack(side="right", anchor=NE)
 b = GUI(root)
-root.title("Intelligent Fellow Robo Apps")
+root.title("Intelligent Fellow Kuro Apps")
 root.geometry("1000x920")
-root.configure(bg='white')
+root.configure(background='white')
 root.mainloop()

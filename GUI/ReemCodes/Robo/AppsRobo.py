@@ -4,36 +4,36 @@ import webbrowser
 
 def News():
     root.destroy()
-    call(['python', 'NewsRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/NewsRobo.py'])
 
 def Calculator():
     root.destroy()
-    call(['python', 'CalculatorRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/CalculatorRobo.py'])
 
 def Remind():
     root.destroy()
-    call(['python', 'ReminderFRobo.py'])
-    call(['python', 'RemindRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/ReminderFRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/RemindRobo.py'])
 
 def Quran():
     root.destroy()
-    call(['python', 'QuranRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/QuranRobo.py'])
 
 def Music():
     root.destroy()
-    call(['python', 'MusicListRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/MusicListRobo.py'])
 
 def AudioBooks():
     root.destroy()
-    call(['python', 'AudioBooksRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AudioBooksRobo.py'])
 
 def Exercise():
     root.destroy()
-    call(['python', 'ExerciseRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/ExerciseRobo.py'])
 
 def Games():
     root.destroy()
-    call(['python', 'GamesRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/GamesRobo.py'])
 
 def Weather():
     webbrowser.open(weather, new=new)
@@ -98,5 +98,5 @@ quitButton.pack(side="right", anchor=NE)
 b = GUI(root)
 root.title("Intelligent Fellow Robo Apps")
 root.geometry("1000x920")
-root.configure(bg='white')
+root.configure(background='white')
 root.mainloop()

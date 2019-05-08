@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 def openMRA():
  webbrowser.open(MRA, new=new)
@@ -42,13 +42,13 @@ MRA = "https://soundcloud.com/hussein-abdelkawy/sets/shmnbresddeo"
 AA="https://soundcloud.com/telawatcloud/sets/abdulbasithafs"
 AAlN = "https://soundcloud.com/shahd-abd-el-aziz/sets/q0cyrjk0xsiw"
 HAB = "https://soundcloud.com/ahmed-bob-731271110/sets/68gixqmstfdu"
-photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Alafasy.png")
-photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Minsha.png")
-photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Alnufais.png")
-photo4 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/hazzaalbalushi.png")
-photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Quran1.png")
-photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
-photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
+photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Alafasy.png")
+photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Minsha.png")
+photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Alnufais.png")
+photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/hazzaalbalushi.png")
+photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Quran1.png")
+photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
 back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
@@ -58,7 +58,7 @@ quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
 b= GUI(root)
-root.title("Intelligent Fellow")
+root.title("Intelligent Fellow BabyG Quran")
 root.geometry("1000x920")
 root.configure(background='white')
 root.mainloop()

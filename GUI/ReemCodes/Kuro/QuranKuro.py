@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
 
 def openMRA():
  webbrowser.open(MRA, new=new)
@@ -58,7 +58,7 @@ quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
 b= GUI(root)
-root.title("Intelligent Fellow Robo Quran")
+root.title("Intelligent Fellow Kuro Quran")
 root.geometry("1000x920")
 root.configure(background='white')
 root.mainloop()

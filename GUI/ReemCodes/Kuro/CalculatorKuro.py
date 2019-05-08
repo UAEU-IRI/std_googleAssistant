@@ -1,4 +1,5 @@
-#tutorial in youtube
+# tutorial in youtube
+# adjusted the design
 import tkinter
 from tkinter import *
 from tkinter import messagebox
@@ -6,7 +7,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
 
 val = ""
 A = 0
@@ -152,7 +153,7 @@ quitButton.pack(side="right", anchor=NE)
 label = Label(root, image=photo)
 label.pack()
 root.geometry("1000x920")
-root.title("IF Robo Calculator")
+root.title("IF Kuro Calculator")
 data = StringVar()
 lbl = Label(
     root,

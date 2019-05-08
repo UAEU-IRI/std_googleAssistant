@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 def openYogaM():
     webbrowser.open(YogaM, new=new)
@@ -59,6 +59,6 @@ photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GU
 photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/NightYoga.png")
 b = GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow Kuro Exercise")
+root.title("Intelligent Fellow BabyG Exercise")
 root.configure(background='white')
 root.mainloop()

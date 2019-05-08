@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'Apps.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 def openEY():
  webbrowser.open(EY, new=new)
@@ -35,13 +35,13 @@ EY="https://www.emaratalyoum.com/"
 B = "https://www.albayan.ae/"
 GN = "https://globalnews.ca"
 root= Tk()
-photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/News1.png")
+photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/News1.png")
 label = Label(root,image=photo)
-photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
-photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
-photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/ematatalyoum.png")
-photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/AlBayan.png")
-photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/GlobalNews.png")
+photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
+photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/ematatalyoum.png")
+photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/AlBayan.png")
+photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/GlobalNews.png")
 back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")

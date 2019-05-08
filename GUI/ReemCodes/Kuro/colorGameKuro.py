@@ -1,3 +1,5 @@
+# source code: https://www.tutorialspoint.com/color-game-using-tkinter-in-python
+# adjusted design
 import tkinter
 import random
 from tkinter import messagebox
@@ -6,7 +8,7 @@ from subprocess import call
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/GamesRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/GamesKuro.py'])
 
 colours = ['Red', 'Blue', 'Green', 'Pink', 'Black', 'Yellow', 'Orange', 'White', 'Purple', 'Brown']
 score = 0
@@ -41,10 +43,10 @@ def win(timeleft):
     if (timeleft == 0):
         ans = "Time is up, your score is: " + str(score)
         messagebox.showinfo("Score", ans)
-        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/RoboWin.py'])
+        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroWin.py'])
 
 root = tkinter.Tk()
-root.title("Robo COLOR GAME")
+root.title("Kuro COLOR GAME")
 root.geometry("1000x920")
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Color1.png")
 label = Label(root, image=photo)

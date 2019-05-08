@@ -4,23 +4,23 @@ from subprocess import call
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/AppsBabyG.py'])
 
 def openPiano():
     webbrowser.open(P, new=new)
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroLick.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/BabyGMusic.py'])
 
 def openArabicSongs():
     webbrowser.open(AS, new=new)
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroLick.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/BabyGMusic.py'])
 
 def openRelaxation():
     webbrowser.open(R, new=new)
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroLick.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/BabyGMusic.py'])
 
 def openEnglishSongs():
     webbrowser.open(ES, new=new)
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroLick.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/BabyG/BabyGMusic.py'])
 
 class GUI:
     def __init__(self, master):
@@ -63,6 +63,6 @@ photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GU
 photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/English.png")
 b = GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow Kuro Music")
+root.title("Intelligent Fellow BabyG Music")
 root.configure(background='white')
 root.mainloop()

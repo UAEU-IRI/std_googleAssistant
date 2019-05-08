@@ -1,3 +1,5 @@
+# source code: https://github.com/nikhilkumarsingh/desktop_reminder
+# adjusted design
 from tkinter import *
 from tkinter import font
 from datetime import datetime
@@ -5,15 +7,15 @@ import time
 import json
 from subprocess import call
 
-REM_FILE = "remindersRobo.txt"
+REM_FILE = "C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/remindersKuro.txt"
 reminders = []
 
 def Back():
     root.destroy()
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
 
 root = Tk()
-root.title("IF Robo Reminder!")
+root.title("IF Kuro Reminder!")
 root["bg"] = "White"
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders1.png")
 label = Label(root, image=photo)
@@ -25,10 +27,12 @@ class REMINDER():
         self.position_window()
         self.mainFrame = Frame(root, padx=10, pady=10, bg="White")
         self.mainFrame.pack(side="bottom", fill=BOTH, expand=1)
-        text = Label(self.mainFrame, text=self.reminder[0], bg="White",font=font.Font(family="Times", size=12),padx=20, pady=10, wraplength=300)
+        text = Label(self.mainFrame, text=self.reminder[0], bg="White", font=font.Font(family="Times", size=12),
+                     padx=20, pady=10, wraplength=300)
         text.pack(fill=BOTH, expand=1)
         self.buttonRow = Frame(self.mainFrame, padx=10, pady=10, bg="White")
-        self.btn1 = Button(self.buttonRow, text="Dismiss", command=self.dismissReminder, bg="White").grid(row=0, column=0)
+        self.btn1 = Button(self.buttonRow, text="Dismiss", command=self.dismissReminder, bg="White").grid(row=0,
+                                                                                                          column=0)
         self.buttonRow.grid_columnconfigure(1, minsize=10)
         self.buttonRow.pack()
         root.mainloop()

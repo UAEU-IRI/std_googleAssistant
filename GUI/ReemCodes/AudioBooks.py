@@ -23,17 +23,17 @@ class GUI:
      self.button2.config(image=photo2)
      self.button1.grid(row=0,column=0)
      self.button2.grid(row=0, column=1)
-
+    
+root= Tk()
 new = 1
 PP="http://www.loyalbooks.com/book/peter-pan-by-j-m-barrie"
 LP = "http://www.loyalbooks.com/book/a-little-princess-by-frances-hodgson-burnett"
-root= Tk()
-photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Audiobook1.png")
+photo = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Audiobook1.png")
 label = Label(root,image=photo)
-photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
-photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
-photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/alittlePrincee.png")
-photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/PeterPan.png")
+photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
+photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/PeterPan.png")
+photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/alittlePrincee.png")
 back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")

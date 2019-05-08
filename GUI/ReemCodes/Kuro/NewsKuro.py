@@ -4,7 +4,7 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
 
 def openEY():
  webbrowser.open(EY, new=new)
@@ -51,6 +51,6 @@ quitButton.pack(side="right", anchor=NE)
 label.pack(side="top", anchor=N)
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow Robo News")
+root.title("Intelligent Fellow")
 root.configure(background='white')
 root.mainloop()

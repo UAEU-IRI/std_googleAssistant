@@ -3,8 +3,8 @@ from subprocess import call
 
 def Back():
  root.destroy()
- call(['python', 'LogoGif.py'])
-
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/LogoGif.py'])
+ 
 def Kuro():
  root.destroy()
  call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Kuro/AppsKuro.py'])
@@ -12,7 +12,7 @@ def Kuro():
 def Robo():
  root.destroy()
  call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/AppsRobo.py'])
-
+ 
 def Baby():
  root.destroy()
  call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/BabyG/AppsBabyG.py'])
@@ -24,9 +24,9 @@ class GUI:
      frame.configure(background='white')
      self.button1 = Button(frame, bg="white", command=Robo)
      self.button1.config(image=photo1)
-     self.button2 = Button(frame, bg="white", command=Kuro)
+     self.button2 = Button(frame,bg="white", command=Kuro)
      self.button2.config(image=photo2)
-     self.button3 = Button(frame, bg="white", command=Baby)
+     self.button3 = Button(frame,bg="white",command=Baby)
      self.button3.config(image=photo3)
      #self.button4 = Button(frame, bg="white")
      #self.button4.config(image=photo4)
@@ -54,6 +54,6 @@ photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GU
 #photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Johnny.png")
 b= GUI(root)
 root.geometry("1000x920")
-root.title("Intelligent Fellow Characters")
+root.title("Intelligent Fellow")
 root.configure(background='white')
 root.mainloop()

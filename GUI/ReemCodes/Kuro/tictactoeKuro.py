@@ -1,12 +1,12 @@
-# The code source from https://github.com/Lavakumar999/Python-Tkinter-FrameWork/blob/master/Tic-tac-toe.py
-# we did some edits like changing the design, and instead of 2 players we will adjust it to be a 1 player versus the computer
+# Source code: https://github.com/Lavakumar999/Python-Tkinter-FrameWork/blob/master/Tic-tac-toe.py
+# adjusted design
 from tkinter import *
 from tkinter import messagebox
 from subprocess import call
 
 def Back():
  window.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/GamesRobo.py'])
+ call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/GamesKuro.py'])
 
 def clicked1():
     global turn
@@ -138,20 +138,21 @@ def check():
         win(btn7["text"])
     if flag ==10:
         messagebox.showinfo("Tie", "Match Tied!!!  Try again :)")
+        call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/AppsKuro.py'])
         window.destroy()
 
 def win(player):
     ans = "Game complete " +player + " wins "
     messagebox.showinfo("Congratulations", ans)
-    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/RoboWin.py'])
+    call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Codes/Kuro/KuroWin.py'])
     window.destroy()
 
 window=Tk()
-window.title("Tic Tac Toe Game Robo")
+window.title("Tic Tac Toe Game Kuro")
 window.geometry("1000x920")
-lbl=Label(window,text="Player 1: X",font=('Agency FB','30', 'bold'))
+lbl=Label(window,text="Player 1: X",font=('Agency FB','15', 'bold'))
 lbl.grid(row=3,column=0)
-lbl=Label(window,text="Player 2: O",font=('Agency FB','30', 'bold'))
+lbl=Label(window,text="Player 2: O",font=('Agency FB','15', 'bold'))
 lbl.grid(row=4,column=0)
 photo = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/tic-tac-toe1.png")
 label = Label(window,image=photo)
@@ -165,22 +166,22 @@ quitButton.config(image=photoE)
 back.grid(row=1,column=0)
 quitButton.grid(row=1,column=5)
 turn=1
-btn1 = Button(window, text=" ",bg="red", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked1)
+btn1 = Button(window, text=" ",bg="red", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked1)
 btn1.grid(column=1, row=2)
-btn2 = Button(window, text=" ",bg="white", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked2)
+btn2 = Button(window, text=" ",bg="white", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked2)
 btn2.grid(column=2, row=2)
-btn3 = Button(window, text=" ",bg="red", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked3)
+btn3 = Button(window, text=" ",bg="red", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked3)
 btn3.grid(column=3, row=2)
-btn4 = Button(window, text=" ",bg="white", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked4)
+btn4 = Button(window, text=" ",bg="white", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked4)
 btn4.grid(column=1, row=3)
-btn5 = Button(window, text=" ",bg="red", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked5)
+btn5 = Button(window, text=" ",bg="red", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked5)
 btn5.grid(column=2, row=3)
-btn6 = Button(window, text=" ",bg="white", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked6)
+btn6 = Button(window, text=" ",bg="white", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked6)
 btn6.grid(column=3, row=3)
-btn7 = Button(window, text=" ",bg="red", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked7)
+btn7 = Button(window, text=" ",bg="red", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked7)
 btn7.grid(column=1, row=4)
-btn8 = Button(window, text=" ",bg="white", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked8)
+btn8 = Button(window, text=" ",bg="white", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked8)
 btn8.grid(column=2, row=4)
-btn9 = Button(window, text=" ",bg="red", fg="Black",width=5,height=2,font=('Agency FB','25', 'bold'),command=clicked9)
+btn9 = Button(window, text=" ",bg="red", fg="Black",width=3,height=1,font=('Agency FB','25', 'bold'),command=clicked9)
 btn9.grid(column=3, row=4)
 window.mainloop()

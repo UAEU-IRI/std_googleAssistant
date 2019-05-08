@@ -1,16 +1,14 @@
 from tkinter import *
 from subprocess import call
-import webbrowser
-from time import sleep
 
 def News():
  root.destroy()
  call(['python', 'News.py'])
- 
+
 def Calculator():
  root.destroy()
  call(['python', 'Calculator.py'])
- 
+
 def Remind():
  root.destroy()
  call(['python', 'ReminderF.py'])
@@ -20,16 +18,9 @@ def Quran():
  root.destroy()
  call(['python', 'Quran.py'])
 
-def combineMusic():
- MusicGif()
- Music()
-
 def Music():
- call(['python', 'MusicList.py'])
- 
-def MusicGif():
  root.destroy()
- call(['python', 'C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/ReemCodes/Robo/RoboMusic.py'])
+ call(['python', 'MusicList.py'])
 
 def AudioBooks():
  root.destroy()
@@ -43,13 +34,10 @@ def Games():
  root.destroy()
  call(['python', 'Games.py'])
  
-def Weather():
- webbrowser.open(weather, new=new)
-
 def Back():
  root.destroy()
  call(['python', 'Characters.py'])
- 
+
 class GUI:
     def __init__(self, master):
      frame = Frame(master)
@@ -71,7 +59,7 @@ class GUI:
      self.button7.config(image=photo7)
      self.button8 = Button(frame, bg="white", command=Games)
      self.button8.config(image=photo8)
-     self.button9 = Button(frame, bg="white", command=Weather)
+     self.button9 = Button(frame, bg="white")
      self.button9.config(image=photo9)
      self.button1.grid(row=0,column=1)
      self.button2.grid(row=0, column=2)
@@ -84,19 +72,17 @@ class GUI:
      self.button9.grid(row=2, column=3)
 
 root= Tk()
-new=1
-weather = "https://weather.com/weather/today/l/24.21,55.67?par=google"
-photo1 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Reminders.png")
-photo2 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/calculator.png")
-photo3 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/News.png")
-photo4 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Quran.png")
-photo5 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Music1.png")
-photo6 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Audiobook.png")
-photo7 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exercise.png")
-photo8 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Games.png")
-photo9 = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Weather.png")
-photoB = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Back.png")
-photoE = PhotoImage(file="C:/Users/Reemy/Documents/GitHub/std_googleAssistant/GUI/Icons/Exit.png")
+photo1 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Reminders.png")
+photo2 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/calculator.png")
+photo3 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/News.png")
+photo4 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Quran.png")
+photo5 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Music1.png")
+photo6 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Audiobook.png")
+photo7 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exercise.png")
+photo8 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Games.png")
+photo9 = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Weather.png")
+photoB = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Back.png")
+photoE = PhotoImage(file="/home/pi/std_googleAssistant/GUI/Icons/Exit.png")
 back = Button(root, bg="white", command=Back)
 back.config(image=photoB)
 quitButton = Button(root, command=root.quit, bg="white")
@@ -106,5 +92,5 @@ quitButton.pack(side="right", anchor=NE)
 b= GUI(root)
 root.title("Intelligent Fellow")
 root.geometry("1000x920")
-root.configure(bg='white')
+root.configure(background='white')
 root.mainloop()
